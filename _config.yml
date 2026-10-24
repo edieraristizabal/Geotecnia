@@ -3,6 +3,10 @@ title: Geotecnia para geólogos
 description: Curso de Geotecnia - Prof. Edier Aristizábal - Universidad Nacional de Colombia, sede Medellín
 logo: assets/img/unal2.png
 
+# El sitio vive en un subdirectorio (/Geotecnia): sin esto el CSS y el logo no cargan
+url: https://edieraristizabal.github.io
+baseurl: /Geotecnia
+
 # El libro (libro/) se construye aparte con Jupyter Book en el GitHub Action
 exclude:
   - libro
