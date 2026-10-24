@@ -1,0 +1,31 @@
+# Compilación LaTeX
+build/
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex.gz.properties
+*.toc
+*.nav
+*.snm
+
+# Libro: el HTML lo genera el GitHub Action
+libro/_build/
+.ipynb_checkpoints/
+__pycache__/
+
+# Jekyll local
+_site/
+.jekyll-cache/
+
+# Sistema
+desktop.ini
+.DS_Store
+Thumbs.db
+
+# Material fuente pesado o con derechos (se queda solo en el disco local)
+*.pptx
+*.ppt
+*.docx

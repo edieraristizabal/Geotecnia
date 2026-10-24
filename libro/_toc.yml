@@ -1,0 +1,33 @@
+# Tabla de contenido
+# https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+- caption: "Parte I: Los materiales geológicos"
+  chapters:
+    - file: 01_introduccion
+    - file: 02_suelos
+    - file: 03_rocas
+    - file: 04_agua
+- caption: "Parte II: Esfuerzos y deformaciones"
+  chapters:
+    - file: 05_esfuerzos
+    - file: 06_esfuerzos_efectivos
+    - file: 07_distribucion
+    - file: 08_compactacion
+    - file: 09_consolidacion
+    - file: 10_cimentaciones
+- caption: "Parte III: Resistencia"
+  chapters:
+    - file: 11_resistencia_corte
+    - file: 12_resistencia_rocas
+- caption: "Parte IV: Laderas y estructuras de contención"
+  chapters:
+    - file: 13_movimientos_masa
+    - file: 14_estabilidad
+    - file: 15_empujes
+- caption: "Apéndices"
+  chapters:
+    - file: A_ensayos
+    - file: referencias

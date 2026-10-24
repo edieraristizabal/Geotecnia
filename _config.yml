@@ -1,0 +1,16 @@
+theme: jekyll-theme-minimal
+title: Geotecnia para geólogos
+description: Curso de Geotecnia - Prof. Edier Aristizábal - Universidad Nacional de Colombia, sede Medellín
+logo: assets/img/unal2.png
+
+# El libro (libro/) se construye aparte con Jupyter Book en el GitHub Action
+exclude:
+  - libro
+  - build
+  - CLAUDE.md
+  - README.md
+  - "*.tex"
+  - .github
+  - .claude
+  - html/plugin/menu/README.md
+  - html/plugin/menu/CONTRIBUTING.md
