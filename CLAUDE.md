@@ -114,3 +114,17 @@ El Action compila con `--warningiserror` y, si hay advertencias, vuelve a compil
 - Proponer los cambios de contenido del curso y esperar aprobación antes de editarlos.
 - Prosa en párrafos, español, sin rayas (em dash): usar comas o paréntesis.
 - Las figuras nuevas se buscan primero en los tableros de Pinterest del autor o en los pptx de `CLASES/`.
+
+## Pendientes conocidos
+
+- Horario y aula del curso están "por definir" en `index.md`, el programa y las diapositivas.
+- Las diapositivas se generaron desde los pptx de `CLASES/` con un script; las figuras que contienen texto en inglés (copiadas de libros) no se pueden traducir.
+
+## Registro de cambios
+
+Cada cambio al repositorio se anota aquí, el más reciente primero, con el formato `- **AAAA-MM-DD**: qué se cambió y por qué (archivos principales).` Esta sección es la memoria del curso entre sesiones: leerla antes de empezar a trabajar.
+
+- **2026-10-24**: Revisión de idioma: la única diapositiva con texto en inglés (cita "Geotechnical Engineering is the art...", diapositiva `0:5`) se tradujo al español. Se mantienen en inglés los títulos de lecturas y referencias bibliográficas. Se agregaron a este archivo las secciones de pendientes y registro de cambios.
+- **2026-10-24**: `_config.yml` con `url` y `baseurl: /Geotecnia` para que el tema de Jekyll cargue el CSS y el logo (la página se veía sin estilos).
+- **2026-10-24**: Nueva evaluación (trabajo 1 sobre el perfil de meteorización de una ladera: escrito 10 % y presentación 20 %; trabajo 2 de análisis de estabilidad de la misma ladera con escenarios de agua y sismo: escrito 10 % y presentación 20 %; parcial teórico 30 %; participación 10 %) en `index.md`, `Programa_GEOTECNIA.tex/.pdf` y diapositivas; sección de análisis pseudoestático en `libro/14_estabilidad.md` y diapositiva correspondiente.
+- **2026-10-24**: Creación del repositorio: página Jekyll, programa en LaTeX, presentación Reveal.js generada desde los pptx de `CLASES/`, libro de 15 capítulos y apéndice de ensayos, y GitHub Action que publica página y libro en `gh-pages`.
