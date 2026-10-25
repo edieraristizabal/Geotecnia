@@ -124,6 +124,7 @@ El Action compila con `--warningiserror` y, si hay advertencias, vuelve a compil
 
 Cada cambio al repositorio se anota aquí, el más reciente primero, con el formato `- **AAAA-MM-DD**: qué se cambió y por qué (archivos principales).` Esta sección es la memoria del curso entre sesiones: leerla antes de empezar a trabajar.
 
+- **2026-10-25**: `README.md` con la sección "Enlaces del curso" (página, presentación y libro publicados) y el enlace a la página personal https://edieraristizabal.github.io/.
 - **2026-10-24**: Interfaz en español: `_layouts/default.html` traducido ("Ver el proyecto en GitHub", "Este proyecto es mantenido por", `lang` = es), reemplaza el texto en inglés del tema minimal de Jekyll. Si git falla con `bad object refs/desktop.ini`, borrar los `desktop.ini` dentro de `.git/` (`find .git -name desktop.ini -delete`): los crea Windows/Google Drive.
 - **2026-10-24**: Revisión de idioma: la única diapositiva con texto en inglés (cita "Geotechnical Engineering is the art...", diapositiva `0:5`) se tradujo al español. Se mantienen en inglés los títulos de lecturas y referencias bibliográficas. Se agregaron a este archivo las secciones de pendientes y registro de cambios.
 - **2026-10-24**: `_config.yml` con `url` y `baseurl: /Geotecnia` para que el tema de Jekyll cargue el CSS y el logo (la página se veía sin estilos).
