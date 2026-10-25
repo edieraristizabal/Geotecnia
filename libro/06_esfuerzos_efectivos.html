@@ -1,0 +1,769 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Esfuerzos efectivos &#8212; Geotecnia para geólogos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06_esfuerzos_efectivos';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://edieraristizabal.github.io/Geotecnia/libro/06_esfuerzos_efectivos.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Distribución de esfuerzos verticales" href="07_distribucion.html" />
+    <link rel="prev" title="Estado de esfuerzos" href="05_esfuerzos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Geotecnia para geólogos - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Geotecnia para geólogos - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Geotecnia para geólogos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte I: Los materiales geológicos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_introduccion.html">Introducción a la geotecnia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_suelos.html">Mecánica de suelos: origen, descripción y clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_rocas.html">Mecánica de rocas: el macizo rocoso y su clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_agua.html">El agua en el suelo y en el macizo rocoso</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte II: Esfuerzos y deformaciones</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_esfuerzos.html">Estado de esfuerzos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Esfuerzos efectivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_distribucion.html">Distribución de esfuerzos verticales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_compactacion.html">Compactación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_consolidacion.html">Consolidación y asentamientos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_cimentaciones.html">Cimentaciones</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte III: Resistencia</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_resistencia_corte.html">Resistencia al cortante de los suelos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_resistencia_rocas.html">Resistencia de las rocas y de los macizos rocosos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte IV: Laderas y estructuras de contención</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13_movimientos_masa.html">Movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_estabilidad.html">Estabilidad de laderas y taludes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_empujes.html">Empujes de tierras y muros de contención</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A_ensayos.html">Apéndice: ensayos geotécnicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Repositorio de origen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/edit/main/libro/06_esfuerzos_efectivos.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/issues/new?title=Issue%20on%20page%20%2F06_esfuerzos_efectivos.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Abrir un problema"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/06_esfuerzos_efectivos.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Esfuerzos efectivos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistencia-y-deformacion-de-los-materiales">Resistencia y deformación de los materiales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-principio-de-esfuerzo-efectivo">El principio de esfuerzo efectivo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deduccion">Deducción</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perfiles-de-esfuerzos-en-un-terreno-estratificado">Perfiles de esfuerzos en un terreno estratificado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flujo-vertical-y-esfuerzos-efectivos">Flujo vertical y esfuerzos efectivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suelos-parcialmente-saturados">Suelos parcialmente saturados</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="esfuerzos-efectivos">
+<span id="cap-efectivos"></span><h1>Esfuerzos efectivos<a class="headerlink" href="#esfuerzos-efectivos" title="Link to this heading">#</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p><strong>Objetivos de aprendizaje</strong></p>
+<ul class="simple">
+<li><p>Enunciar y deducir el principio de esfuerzo efectivo de Terzaghi.</p></li>
+<li><p>Calcular los perfiles de esfuerzo total, presión de poros y esfuerzo efectivo en un terreno estratificado.</p></li>
+<li><p>Evaluar el efecto del flujo vertical sobre los esfuerzos efectivos y calcular el gradiente crítico.</p></li>
+<li><p>Reconocer el papel de los esfuerzos efectivos en la resistencia y la deformación de los suelos.</p></li>
+</ul>
+</div>
+<section id="resistencia-y-deformacion-de-los-materiales">
+<h2>Resistencia y deformación de los materiales<a class="headerlink" href="#resistencia-y-deformacion-de-los-materiales" title="Link to this heading">#</a></h2>
+<p>La resistencia es la capacidad de un material para soportar una carga sin fallar. En los suelos interesa principalmente la resistencia al corte, porque los suelos fallan por deslizamiento entre partículas. La relación entre esfuerzo y deformación de un suelo puede ser elástica, elastoplástica o elastoplástica con ablandamiento, en la que la resistencia alcanza un pico y luego desciende a un valor residual. Las arcillas sobreconsolidadas y las arenas densas muestran este ablandamiento, mientras que las rocas suelen tener un comportamiento frágil.</p>
+<p>Para simplificar el análisis, muchas soluciones clásicas suponen que el suelo es un medio continuo, homogéneo, isotrópico y linealmente elástico. Es una idealización útil para calcular esfuerzos bajo cargas de trabajo (capítulo <a class="reference internal" href="07_distribucion.html#cap-distribucion"><span class="std std-ref">Distribución de esfuerzos verticales</span></a>), pero no describe el comportamiento cerca de la falla. Tanto la resistencia como la deformación de un suelo dependen de los esfuerzos que soporta su esqueleto de partículas, no del esfuerzo total. Ese es el contenido del principio de esfuerzo efectivo.</p>
+</section>
+<section id="el-principio-de-esfuerzo-efectivo">
+<h2>El principio de esfuerzo efectivo<a class="headerlink" href="#el-principio-de-esfuerzo-efectivo" title="Link to this heading">#</a></h2>
+<p>Terzaghi (1936) formuló el principio que es la base de la mecánica de suelos moderna. En sus palabras, todos los efectos medibles de un cambio de esfuerzo, como la compresión, la distorsión y el cambio de resistencia al corte, se deben exclusivamente a cambios en los esfuerzos efectivos. Por lo tanto, cualquier investigación sobre la estabilidad de un suelo saturado requiere conocer tanto el esfuerzo total como la presión de poros.</p>
+<section id="deduccion">
+<h3>Deducción<a class="headerlink" href="#deduccion" title="Link to this heading">#</a></h3>
+<p>Considérese una columna de suelo saturado de área <span class="math notranslate nohighlight">\(A\)</span>, con un plano horizontal a una profundidad <span class="math notranslate nohighlight">\(z\)</span> bajo el nivel freático, que coincide con la superficie. El peso total de la columna es la suma del peso de las partículas, <span class="math notranslate nohighlight">\(W_s\)</span>, y del peso del agua, <span class="math notranslate nohighlight">\(W_w=\gamma_wV_w\)</span>. Las partículas sumergidas reciben el empuje de Arquímedes, <span class="math notranslate nohighlight">\(U=\gamma_wV_s\)</span>, de modo que su peso efectivo es <span class="math notranslate nohighlight">\(W'_s=W_s-U\)</span>. Sustituyendo:</p>
+<div class="math notranslate nohighlight">
+\[
+W=W'_s+\gamma_w(V_s+V_w)=W'_s+\gamma_w\,A\,z
+\]</div>
+<p>Al dividir por el área se obtienen tres términos con significado físico. <span class="math notranslate nohighlight">\(W/A\)</span> es el <strong>esfuerzo total</strong> <span class="math notranslate nohighlight">\(\sigma\)</span>, debido al peso de todo lo que hay sobre el plano. <span class="math notranslate nohighlight">\(W'_s/A\)</span> es el <strong>esfuerzo efectivo</strong> <span class="math notranslate nohighlight">\(\sigma'\)</span>, transmitido por los contactos entre partículas. <span class="math notranslate nohighlight">\(\gamma_wz\)</span> es la <strong>presión de poros</strong> <span class="math notranslate nohighlight">\(u\)</span>, que actúa en el agua con igual intensidad en todas las direcciones. Así:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\sigma'=\sigma-u}
+\]</div>
+<figure class="align-default" id="fig-efectivo">
+<a class="reference internal image-reference" href="_images/s18_0507.webp"><img alt="_images/s18_0507.webp" src="_images/s18_0507.webp" style="width: 65%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 32 </span><span class="caption-text">Esfuerzo total, presión de poros y esfuerzo efectivo.</span><a class="headerlink" href="#fig-efectivo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>El esfuerzo efectivo no es una fuerza que se pueda medir directamente en un contacto: es una diferencia de esfuerzos. Su utilidad radica en que controla el comportamiento del suelo. Un cambio de la presión de poros a esfuerzo total constante produce cambios de volumen y de resistencia, mientras que un aumento igual de <span class="math notranslate nohighlight">\(\sigma\)</span> y de <span class="math notranslate nohighlight">\(u\)</span> no produce efecto alguno. Por eso un suelo en el fondo de un lago profundo no se consolida por el peso del agua que tiene encima.</p>
+<div class="tip admonition">
+<p class="admonition-title">Implicaciones geológicas</p>
+<p>El principio explica fenómenos que el geólogo observa en campo. La subsidencia de ciudades por bombeo de acuíferos se debe al aumento del esfuerzo efectivo al bajar el nivel piezométrico. Los deslizamientos detonados por lluvia ocurren porque el aumento de la presión de poros reduce el esfuerzo efectivo normal sobre la superficie de falla. Y la resistencia de un sedimento que no se compactó, por estar sometido a sobrepresiones durante su depósito rápido, es anormalmente baja.</p>
+</div>
+</section>
+</section>
+<section id="perfiles-de-esfuerzos-en-un-terreno-estratificado">
+<h2>Perfiles de esfuerzos en un terreno estratificado<a class="headerlink" href="#perfiles-de-esfuerzos-en-un-terreno-estratificado" title="Link to this heading">#</a></h2>
+<p>En condiciones hidrostáticas el esfuerzo total vertical a una profundidad <span class="math notranslate nohighlight">\(z\)</span> es la suma de los pesos de los estratos suprayacentes, la presión de poros es <span class="math notranslate nohighlight">\(u=\gamma_wz_w\)</span>, donde <span class="math notranslate nohighlight">\(z_w\)</span> es la profundidad bajo el nivel freático, y el esfuerzo efectivo resulta de la diferencia. Sobre el nivel freático se usa el peso unitario húmedo y, si se ignora la succión, <span class="math notranslate nohighlight">\(u=0\)</span>; bajo el nivel freático se usa el peso unitario saturado.</p>
+<div class="note admonition">
+<p class="admonition-title">Ejemplo resuelto: perfil de esfuerzos y efecto del descenso del nivel freático</p>
+<p>Un perfil se compone de 5 m de arena sobre 4 m de grava que descansa sobre roca. El nivel freático está a 2 m de profundidad. El peso unitario de la arena es 17 kN/m³ sobre el nivel freático y 20,5 kN/m³ por debajo; el de la grava saturada es 21,5 kN/m³. Use <span class="math notranslate nohighlight">\(\gamma_w=10\)</span> kN/m³. Calcule <span class="math notranslate nohighlight">\(\sigma\)</span>, <span class="math notranslate nohighlight">\(u\)</span> y <span class="math notranslate nohighlight">\(\sigma'\)</span> hasta la roca, y analice qué ocurre si el nivel freático desciende hasta el contacto arena-grava.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(z\)</span> (m)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\sigma\)</span> (kPa)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(u\)</span> (kPa)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\sigma'\)</span> (kPa)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\sigma'\)</span> con NF a 5 m (kPa)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><span class="math notranslate nohighlight">\(2\times17=34\)</span></p></td>
+<td><p>0</p></td>
+<td><p>34</p></td>
+<td><p>34</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><span class="math notranslate nohighlight">\(34+3\times20{,}5=95{,}5\)</span></p></td>
+<td><p>30</p></td>
+<td><p>65,5</p></td>
+<td><p><span class="math notranslate nohighlight">\(5\times17=85\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p><span class="math notranslate nohighlight">\(95{,}5+4\times21{,}5=181{,}5\)</span></p></td>
+<td><p>70</p></td>
+<td><p>111,5</p></td>
+<td><p><span class="math notranslate nohighlight">\(85+86-40=131\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Con el descenso del nivel freático, la arena entre 2 y 5 m pasa a estar húmeda (17 kN/m³) en lugar de saturada, y la presión de poros en la base disminuye de 70 a 40 kPa. El esfuerzo efectivo en la base aumenta de 111,5 a 131 kPa, un incremento de 17 %. Si bajo la grava hubiera una arcilla compresible, este aumento produciría asentamientos por consolidación.</p>
+</div>
+</section>
+<section id="flujo-vertical-y-esfuerzos-efectivos">
+<h2>Flujo vertical y esfuerzos efectivos<a class="headerlink" href="#flujo-vertical-y-esfuerzos-efectivos" title="Link to this heading">#</a></h2>
+<p>Cuando el agua fluye verticalmente a través del suelo, la presión de poros deja de ser hidrostática y el esfuerzo efectivo cambia. Con flujo <strong>descendente</strong> la fuerza de filtración actúa en el mismo sentido que el peso y el esfuerzo efectivo aumenta. Con flujo <strong>ascendente</strong> ocurre lo contrario. A una profundidad <span class="math notranslate nohighlight">\(z\)</span> dentro de un suelo con flujo ascendente y gradiente <span class="math notranslate nohighlight">\(i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma'=z\,\gamma'-i\,z\,\gamma_w
+\]</div>
+<p>El esfuerzo efectivo se anula cuando el gradiente alcanza el valor crítico:</p>
+<div class="math notranslate nohighlight">
+\[
+i_{cr}=\frac{\gamma'}{\gamma_w}=\frac{G_s-1}{1+e}
+\]</div>
+<p>En ese momento la arena pierde toda su resistencia y se comporta como un líquido denso. Es la condición de <strong>ebullición</strong> o arena movediza, que se produce aguas abajo de presas, en el fondo de excavaciones bajo el nivel freático y en surgencias naturales. Los suelos finos no llegan a este estado tan fácilmente porque la cohesión los mantiene unidos.</p>
+<figure class="align-default" id="fig-ascendente">
+<a class="reference internal image-reference" href="_images/s26_0515.webp"><img alt="_images/s26_0515.webp" src="_images/s26_0515.webp" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 33 </span><span class="caption-text">Flujo ascendente a través de una muestra de suelo.</span><a class="headerlink" href="#fig-ascendente" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Ejemplo resuelto: gradiente crítico</p>
+<p>Una arena tiene <span class="math notranslate nohighlight">\(G_s=2{,}65\)</span> y <span class="math notranslate nohighlight">\(e=0{,}60\)</span>. Calcule el gradiente crítico y el factor de seguridad contra la ebullición si en el fondo de una excavación el gradiente de salida es 0,45.</p>
+<p><span class="math notranslate nohighlight">\(i_{cr}=(2{,}65-1)/(1+0{,}60)=1{,}03\)</span>. El factor de seguridad es <span class="math notranslate nohighlight">\(FS=i_{cr}/i=1{,}03/0{,}45=2{,}3\)</span>. Se suele exigir un valor mínimo entre 3 y 4 porque el gradiente se concentra en los bordes de la excavación y porque la erosión interna puede comenzar con gradientes menores que el crítico.</p>
+</div>
+</section>
+<section id="suelos-parcialmente-saturados">
+<h2>Suelos parcialmente saturados<a class="headerlink" href="#suelos-parcialmente-saturados" title="Link to this heading">#</a></h2>
+<p>En la zona no saturada el agua y el aire comparten los poros y el principio de Terzaghi no se aplica directamente. Bishop (1959) propuso una extensión:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma'=(\sigma-u_a)+\chi\,(u_a-u_w)
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\((u_a-u_w)\)</span> es la succión matricial y <span class="math notranslate nohighlight">\(\chi\)</span> un parámetro que varía entre 0 (suelo seco) y 1 (suelo saturado). La succión aumenta el esfuerzo efectivo y con él la resistencia. Cuando la lluvia satura el suelo, la succión desaparece y la resistencia disminuye, aunque no se forme un nivel freático. Este mecanismo, estudiado por <span class="bibtex-citation" id="id1">Fredlund and Rahardjo [<a class="reference internal" href="referencias.html#id20" title="D. G. Fredlund and H. Rahardjo. Soil Mechanics for Unsaturated Soils. John Wiley &amp; Sons, New York, 1993.">1993</a>]</span> y <span class="bibtex-citation" id="id2">Lu and Likos [<a class="reference internal" href="referencias.html#id31" title="Ning Lu and William J. Likos. Unsaturated Soil Mechanics. John Wiley &amp; Sons, Hoboken, 2004.">2004</a>]</span>, es esencial para entender la estabilidad de las laderas en suelos residuales tropicales.</p>
+</section>
+<section id="lecturas-recomendadas">
+<h2>Lecturas recomendadas<a class="headerlink" href="#lecturas-recomendadas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="bibtex-citation" id="id3">Das [<a class="reference internal" href="referencias.html#id14" title="Braja M. Das. Fundamentos de ingeniería geotécnica. Thomson Learning, México, 2001.">2001</a>]</span>, capítulo 7.</p></li>
+<li><p><span class="bibtex-citation" id="id4">Terzaghi <em>et al.</em> [<a class="reference internal" href="referencias.html#id39" title="Karl Terzaghi, Ralph B. Peck, and Gholamreza Mesri. Soil Mechanics in Engineering Practice. John Wiley &amp; Sons, New York, 3 edition, 1996.">1996</a>]</span>, capítulo sobre el principio de esfuerzo efectivo.</p></li>
+<li><p><span class="bibtex-citation" id="id5">Lu and Likos [<a class="reference internal" href="referencias.html#id31" title="Ning Lu and William J. Likos. Unsaturated Soil Mechanics. John Wiley &amp; Sons, Hoboken, 2004.">2004</a>]</span>, capítulo 5, sobre esfuerzo efectivo en suelos no saturados.</p></li>
+</ul>
+</section>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Calcule los esfuerzos total y efectivo y la presión de poros a 15 m bajo el fondo de un lago de 6 m de profundidad, en una arcilla con <span class="math notranslate nohighlight">\(w=40\,\%\)</span> y <span class="math notranslate nohighlight">\(G_s=2{,}65\)</span>.</p></li>
+<li><p>Repita el ejemplo del perfil arena-grava suponiendo que un acuífero confinado en la grava tiene una carga piezométrica 3 m sobre la superficie del terreno.</p></li>
+<li><p>Explique por qué una excavación en arena bajo el nivel freático puede fallar por el fondo aunque sus taludes sean estables.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05_esfuerzos.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Estado de esfuerzos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="07_distribucion.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Distribución de esfuerzos verticales</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistencia-y-deformacion-de-los-materiales">Resistencia y deformación de los materiales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-principio-de-esfuerzo-efectivo">El principio de esfuerzo efectivo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deduccion">Deducción</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perfiles-de-esfuerzos-en-un-terreno-estratificado">Perfiles de esfuerzos en un terreno estratificado</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flujo-vertical-y-esfuerzos-efectivos">Flujo vertical y esfuerzos efectivos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#suelos-parcialmente-saturados">Suelos parcialmente saturados</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Desarrollado por <a href="https://github.com/edieraristizabal">Edier Aristizábal</a>, Facultad de Minas, Universidad Nacional de Colombia.
+<a href="https://edieraristizabal.github.io/Geotecnia/">Página del curso</a> ·
+<a href="https://edieraristizabal.github.io/Geotecnia/html/Geotecnia.html">Diapositivas</a></p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

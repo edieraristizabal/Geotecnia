@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Distribución de esfuerzos verticales &#8212; Geotecnia para geólogos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '07_distribucion';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://edieraristizabal.github.io/Geotecnia/libro/07_distribucion.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Compactación" href="08_compactacion.html" />
+    <link rel="prev" title="Esfuerzos efectivos" href="06_esfuerzos_efectivos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Geotecnia para geólogos - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Geotecnia para geólogos - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Geotecnia para geólogos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte I: Los materiales geológicos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_introduccion.html">Introducción a la geotecnia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_suelos.html">Mecánica de suelos: origen, descripción y clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_rocas.html">Mecánica de rocas: el macizo rocoso y su clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_agua.html">El agua en el suelo y en el macizo rocoso</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte II: Esfuerzos y deformaciones</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_esfuerzos.html">Estado de esfuerzos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_esfuerzos_efectivos.html">Esfuerzos efectivos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Distribución de esfuerzos verticales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_compactacion.html">Compactación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_consolidacion.html">Consolidación y asentamientos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_cimentaciones.html">Cimentaciones</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte III: Resistencia</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_resistencia_corte.html">Resistencia al cortante de los suelos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_resistencia_rocas.html">Resistencia de las rocas y de los macizos rocosos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte IV: Laderas y estructuras de contención</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13_movimientos_masa.html">Movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_estabilidad.html">Estabilidad de laderas y taludes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_empujes.html">Empujes de tierras y muros de contención</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A_ensayos.html">Apéndice: ensayos geotécnicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Repositorio de origen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/edit/main/libro/07_distribucion.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/issues/new?title=Issue%20on%20page%20%2F07_distribucion.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Abrir un problema"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/07_distribucion.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Distribución de esfuerzos verticales</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-teoria-elastica-en-geotecnia">La teoría elástica en geotecnia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carga-puntual-solucion-de-boussinesq">Carga puntual: solución de Boussinesq</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bulbo-de-presiones">Bulbo de presiones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#otras-geometrias-de-carga">Otras geometrías de carga</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carta-de-influencia-de-newmark">Carta de influencia de Newmark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="distribucion-de-esfuerzos-verticales">
+<span id="cap-distribucion"></span><h1>Distribución de esfuerzos verticales<a class="headerlink" href="#distribucion-de-esfuerzos-verticales" title="Link to this heading">#</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p><strong>Objetivos de aprendizaje</strong></p>
+<ul class="simple">
+<li><p>Reconocer los supuestos de la teoría elástica aplicada a los suelos.</p></li>
+<li><p>Calcular el incremento de esfuerzo vertical bajo cargas puntuales, lineales, de franja, circulares y rectangulares.</p></li>
+<li><p>Aplicar el principio de superposición y la carta de Newmark.</p></li>
+<li><p>Interpretar el bulbo de presiones y su relación con la profundidad de exploración.</p></li>
+</ul>
+</div>
+<section id="la-teoria-elastica-en-geotecnia">
+<h2>La teoría elástica en geotecnia<a class="headerlink" href="#la-teoria-elastica-en-geotecnia" title="Link to this heading">#</a></h2>
+<p>Para calcular asentamientos es necesario conocer cuánto aumenta el esfuerzo en el terreno por efecto de una carga aplicada en la superficie. Cuando los esfuerzos son pequeños respecto a la resistencia, en la parte inicial y aproximadamente lineal de la curva esfuerzo-deformación, se puede suponer que el suelo está en equilibrio elástico y aplicar las soluciones de la teoría de la elasticidad. Estas soluciones suponen un medio continuo, homogéneo, isotrópico y linealmente elástico, un semiespacio infinito. Ningún suelo real cumple estas condiciones, pero la distribución del esfuerzo vertical resulta poco sensible a ellas y las soluciones dan resultados razonables para el diseño.</p>
+<p>Como las ecuaciones son lineales, se cumple el <strong>principio de superposición</strong>: el incremento de esfuerzo producido por varias cargas es la suma de los incrementos que produce cada una por separado. Esto permite construir la solución para áreas cargadas de cualquier forma a partir de soluciones elementales.</p>
+</section>
+<section id="carga-puntual-solucion-de-boussinesq">
+<h2>Carga puntual: solución de Boussinesq<a class="headerlink" href="#carga-puntual-solucion-de-boussinesq" title="Link to this heading">#</a></h2>
+<p>Boussinesq (1885) obtuvo el incremento de esfuerzo vertical a una profundidad <span class="math notranslate nohighlight">\(z\)</span> y a una distancia horizontal <span class="math notranslate nohighlight">\(r\)</span> de una carga puntual <span class="math notranslate nohighlight">\(Q\)</span> aplicada en la superficie:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta\sigma_z=\frac{3Q}{2\pi z^2}\left[\frac{1}{1+(r/z)^2}\right]^{5/2}
+\]</div>
+<p>El esfuerzo vertical no depende de las constantes elásticas del medio; solo depende de la geometría. Disminuye con el cuadrado de la profundidad bajo la carga y se dispersa lateralmente.</p>
+<figure class="align-default" id="fig-boussinesq">
+<a class="reference internal image-reference" href="_images/s05_0527.webp"><img alt="_images/s05_0527.webp" src="_images/s05_0527.webp" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 34 </span><span class="caption-text">Esfuerzo vertical bajo una carga puntual. Fuente: Das (2001).</span><a class="headerlink" href="#fig-boussinesq" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Ejemplo resuelto: carga puntual</p>
+<p>Una torre transmite una carga concentrada de 500 kN. Calcule el incremento de esfuerzo vertical a 3 m de profundidad, directamente bajo la carga y a 1, 2 y 3 m de distancia horizontal.</p>
+<p>Bajo la carga (<span class="math notranslate nohighlight">\(r=0\)</span>): <span class="math notranslate nohighlight">\(\Delta\sigma_z=3(500)/(2\pi\cdot9)=26{,}5\)</span> kPa.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(r\)</span> (m)</p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(r/z\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\([1/(1+(r/z)^2)]^{5/2}\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\Delta\sigma_z\)</span> (kPa)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1,000</p></td>
+<td><p>26,5</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>0,33</p></td>
+<td><p>0,768</p></td>
+<td><p>20,4</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>0,67</p></td>
+<td><p>0,399</p></td>
+<td><p>10,6</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>1,00</p></td>
+<td><p>0,177</p></td>
+<td><p>4,7</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="bulbo-de-presiones">
+<h2>Bulbo de presiones<a class="headerlink" href="#bulbo-de-presiones" title="Link to this heading">#</a></h2>
+<p>Las curvas que unen los puntos de igual incremento de esfuerzo se denominan <strong>isóbaras</strong>, y el volumen que encierran forma el <strong>bulbo de presiones</strong>. Bajo una zapata cuadrada de ancho <span class="math notranslate nohighlight">\(B\)</span>, el incremento de esfuerzo cae por debajo del 10 % de la presión aplicada a una profundidad de aproximadamente <span class="math notranslate nohighlight">\(2B\)</span>; bajo una zapata corrida, a unos <span class="math notranslate nohighlight">\(4B\)</span>. Esta zona es la que se ve afectada por la carga, y es la que debe investigarse en la exploración: la NSR-10 relaciona la profundidad mínima de los sondeos con el ancho de la cimentación y con la profundidad a la que el incremento de esfuerzo se vuelve despreciable.</p>
+<figure class="align-default" id="fig-bulbo">
+<a class="reference internal image-reference" href="_images/s07_0535.webp"><img alt="_images/s07_0535.webp" src="_images/s07_0535.webp" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 35 </span><span class="caption-text">Bulbo de presiones bajo una cimentación.</span><a class="headerlink" href="#fig-bulbo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="tip admonition">
+<p class="admonition-title">El bulbo de presiones y la geología</p>
+<p>El bulbo de presiones dice hasta dónde llega la influencia de la obra, y la geología dice qué hay dentro de ese volumen. Una zapata ancha o una losa de un edificio puede tener un bulbo que alcance un estrato compresible profundo, invisible para una exploración diseñada con zapatas pequeñas. En valles aluviales con lentes de turba o arcillas lacustres, esta es una causa clásica de asentamientos inesperados.</p>
+</div>
+</section>
+<section id="otras-geometrias-de-carga">
+<h2>Otras geometrías de carga<a class="headerlink" href="#otras-geometrias-de-carga" title="Link to this heading">#</a></h2>
+<p>Integrando la solución de Boussinesq se obtienen expresiones para otras geometrías. Para una <strong>carga lineal</strong> <span class="math notranslate nohighlight">\(q\)</span> por unidad de longitud:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta\sigma_z=\frac{2q\,z^3}{\pi\,(x^2+z^2)^2}
+\]</div>
+<p>Para una <strong>franja</strong> de ancho <span class="math notranslate nohighlight">\(B\)</span> con presión uniforme <span class="math notranslate nohighlight">\(q\)</span>, que representa una zapata corrida o un terraplén largo:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta\sigma_z=\frac{q}{\pi}\left[\alpha+\sin\alpha\cos(\alpha+2\delta)\right]
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(\alpha\)</span> y <span class="math notranslate nohighlight">\(\delta\)</span> son los ángulos que definen la posición del punto respecto a los bordes de la franja. Bajo el centro de un <strong>área circular</strong> de radio <span class="math notranslate nohighlight">\(R\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta\sigma_z=q\left\{1-\left[\frac{1}{1+(R/z)^2}\right]^{3/2}\right\}
+\]</div>
+<p>Para un <strong>área rectangular</strong> de lados <span class="math notranslate nohighlight">\(B\times L\)</span>, el incremento bajo una esquina se expresa como <span class="math notranslate nohighlight">\(\Delta\sigma_z=q\,I\)</span>, donde el factor de influencia <span class="math notranslate nohighlight">\(I\)</span> depende de <span class="math notranslate nohighlight">\(m=B/z\)</span> y <span class="math notranslate nohighlight">\(n=L/z\)</span> <span class="bibtex-citation" id="id1">[<a class="reference internal" href="referencias.html#id14" title="Braja M. Das. Fundamentos de ingeniería geotécnica. Thomson Learning, México, 2001.">Das, 2001</a>]</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+I=\frac{1}{4\pi}\left[\frac{2mn\sqrt{m^2+n^2+1}}{m^2+n^2+m^2n^2+1}\cdot\frac{m^2+n^2+2}{m^2+n^2+1}+\tan^{-1}\frac{2mn\sqrt{m^2+n^2+1}}{m^2+n^2-m^2n^2+1}\right]
+\]</div>
+<p>Para calcular el esfuerzo en cualquier otro punto, el área se divide en rectángulos que tengan una esquina sobre la vertical del punto, y se suman o restan sus contribuciones.</p>
+<figure class="align-default" id="fig-rectangular">
+<a class="reference internal image-reference" href="_images/s16_0551.webp"><img alt="_images/s16_0551.webp" src="_images/s16_0551.webp" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 36 </span><span class="caption-text">Esfuerzo vertical bajo la esquina de un área rectangular cargada.</span><a class="headerlink" href="#fig-rectangular" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Ejemplo resuelto: zapata cuadrada y método 2:1</p>
+<p>Una zapata de 2 m × 2 m transmite una presión de 150 kPa. Calcule el incremento de esfuerzo bajo su centro a 1, 2, 4 y 6 m de profundidad, y compárelo con el método aproximado 2:1.</p>
+<p>Bajo el centro, la zapata se divide en cuatro rectángulos de 1 m × 1 m con una esquina común. A <span class="math notranslate nohighlight">\(z=2\)</span> m, <span class="math notranslate nohighlight">\(m=n=1/2=0{,}5\)</span> e <span class="math notranslate nohighlight">\(I=0{,}0840\)</span>, de modo que <span class="math notranslate nohighlight">\(\Delta\sigma_z=4\times0{,}0840\times150=50{,}4\)</span> kPa.</p>
+<p>El método 2:1 supone que la carga se distribuye con una pendiente de 2 vertical a 1 horizontal: <span class="math notranslate nohighlight">\(\Delta\sigma_z=qBL/[(B+z)(L+z)]=150\times4/16=37{,}5\)</span> kPa.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(z\)</span> (m)</p></th>
+<th class="head"><p>Boussinesq (kPa)</p></th>
+<th class="head"><p>Método 2:1 (kPa)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>105,1</p></td>
+<td><p>66,7</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>50,4</p></td>
+<td><p>37,5</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>16,2</p></td>
+<td><p>16,7</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>7,6</p></td>
+<td><p>9,4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>El método 2:1 subestima el esfuerzo bajo el centro a poca profundidad y lo sobrestima a gran profundidad. Es útil para estimaciones rápidas, pero no para cálculos de asentamientos de estratos superficiales.</p>
+</div>
+</section>
+<section id="carta-de-influencia-de-newmark">
+<h2>Carta de influencia de Newmark<a class="headerlink" href="#carta-de-influencia-de-newmark" title="Link to this heading">#</a></h2>
+<p>Newmark (1942) propuso un método gráfico para áreas de forma irregular. La carta está formada por círculos concéntricos y radios que dividen el plano en elementos, cada uno de los cuales produce el mismo incremento de esfuerzo en el centro de la carta, a una profundidad igual a la longitud de un segmento de referencia AB. El procedimiento es el siguiente:</p>
+<ol class="arabic simple">
+<li><p>Se elige la profundidad <span class="math notranslate nohighlight">\(z\)</span> a la que se quiere conocer <span class="math notranslate nohighlight">\(\Delta\sigma\)</span>.</p></li>
+<li><p>Se dibuja la planta del área cargada a una escala en la que <span class="math notranslate nohighlight">\(z\)</span> sea igual al segmento AB de la carta.</p></li>
+<li><p>Se ubica la planta sobre la carta con el punto de interés en el centro.</p></li>
+<li><p>Se cuenta el número de elementos <span class="math notranslate nohighlight">\(M\)</span> cubiertos por el área y se calcula <span class="math notranslate nohighlight">\(\Delta\sigma_z=IV\cdot M\cdot q\)</span>, donde <span class="math notranslate nohighlight">\(IV\)</span> es el valor de influencia de la carta (típicamente 0,005).</p></li>
+</ol>
+<figure class="align-default" id="fig-newmark">
+<a class="reference internal image-reference" href="_images/s21_0560.webp"><img alt="_images/s21_0560.webp" src="_images/s21_0560.webp" style="width: 40%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 37 </span><span class="caption-text">Carta de influencia de Newmark.</span><a class="headerlink" href="#fig-newmark" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="lecturas-recomendadas">
+<h2>Lecturas recomendadas<a class="headerlink" href="#lecturas-recomendadas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="bibtex-citation" id="id2">Das [<a class="reference internal" href="referencias.html#id14" title="Braja M. Das. Fundamentos de ingeniería geotécnica. Thomson Learning, México, 2001.">2001</a>]</span>, capítulo 8.</p></li>
+<li><p><span class="bibtex-citation" id="id3">Holtz and Kovacs [<a class="reference internal" href="referencias.html#id28" title="Robert D. Holtz and William D. Kovacs. An Introduction to Geotechnical Engineering. Prentice-Hall, Englewood Cliffs, 1981.">1981</a>]</span>, capítulo 10.</p></li>
+</ul>
+</section>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Un tanque circular de 10 m de diámetro transmite 100 kPa. Calcule el incremento de esfuerzo bajo el centro a 5 y 10 m de profundidad.</p></li>
+<li><p>Calcule el incremento de esfuerzo a 3 m de profundidad bajo la esquina de una losa de 6 m × 12 m que transmite 80 kPa, y bajo un punto exterior ubicado a 2 m de uno de los lados largos.</p></li>
+<li><p>¿Qué profundidad mínima de exploración recomendaría para una losa de 20 m × 30 m en un valle aluvial? Justifique con el bulbo de presiones.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="06_esfuerzos_efectivos.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Esfuerzos efectivos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="08_compactacion.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Compactación</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-teoria-elastica-en-geotecnia">La teoría elástica en geotecnia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carga-puntual-solucion-de-boussinesq">Carga puntual: solución de Boussinesq</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bulbo-de-presiones">Bulbo de presiones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#otras-geometrias-de-carga">Otras geometrías de carga</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#carta-de-influencia-de-newmark">Carta de influencia de Newmark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Desarrollado por <a href="https://github.com/edieraristizabal">Edier Aristizábal</a>, Facultad de Minas, Universidad Nacional de Colombia.
+<a href="https://edieraristizabal.github.io/Geotecnia/">Página del curso</a> ·
+<a href="https://edieraristizabal.github.io/Geotecnia/html/Geotecnia.html">Diapositivas</a></p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

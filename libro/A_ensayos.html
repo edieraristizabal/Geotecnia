@@ -1,0 +1,715 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Apéndice: ensayos geotécnicos &#8212; Geotecnia para geólogos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'A_ensayos';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://edieraristizabal.github.io/Geotecnia/libro/A_ensayos.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Referencias" href="referencias.html" />
+    <link rel="prev" title="Empujes de tierras y muros de contención" href="15_empujes.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Geotecnia para geólogos - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Geotecnia para geólogos - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Geotecnia para geólogos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte I: Los materiales geológicos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_introduccion.html">Introducción a la geotecnia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_suelos.html">Mecánica de suelos: origen, descripción y clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_rocas.html">Mecánica de rocas: el macizo rocoso y su clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_agua.html">El agua en el suelo y en el macizo rocoso</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte II: Esfuerzos y deformaciones</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_esfuerzos.html">Estado de esfuerzos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_esfuerzos_efectivos.html">Esfuerzos efectivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_distribucion.html">Distribución de esfuerzos verticales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_compactacion.html">Compactación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_consolidacion.html">Consolidación y asentamientos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_cimentaciones.html">Cimentaciones</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte III: Resistencia</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_resistencia_corte.html">Resistencia al cortante de los suelos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_resistencia_rocas.html">Resistencia de las rocas y de los macizos rocosos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte IV: Laderas y estructuras de contención</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13_movimientos_masa.html">Movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_estabilidad.html">Estabilidad de laderas y taludes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_empujes.html">Empujes de tierras y muros de contención</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndices</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Apéndice: ensayos geotécnicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Repositorio de origen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/edit/main/libro/A_ensayos.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/issues/new?title=Issue%20on%20page%20%2FA_ensayos.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Abrir un problema"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/A_ensayos.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Apéndice: ensayos geotécnicos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploracion-del-subsuelo">Exploración del subsuelo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toma-de-muestras">Toma de muestras</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-campo">Ensayos de campo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayo-de-penetracion-estandar-spt">Ensayo de penetración estándar (SPT)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayo-de-penetracion-de-cono-cpt-y-cptu">Ensayo de penetración de cono (CPT y CPTu)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-permeabilidad">Ensayos de permeabilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prospeccion-geofisica">Prospección geofísica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-in-situ-de-resistencia-y-deformabilidad">Ensayos in situ de resistencia y deformabilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumentacion">Instrumentación</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-laboratorio">Ensayos de laboratorio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-clasificacion">Ensayos de clasificación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compresion-simple">Compresión simple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corte-directo">Corte directo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-triaxiales-uu-cu-y-cd">Ensayos triaxiales UU, CU y CD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consolidacion">Consolidación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compactacion">Compactación</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="apendice-ensayos-geotecnicos">
+<span id="cap-ensayos"></span><h1>Apéndice: ensayos geotécnicos<a class="headerlink" href="#apendice-ensayos-geotecnicos" title="Link to this heading">#</a></h1>
+<p>Este apéndice resume los ensayos de campo y de laboratorio que se usan para caracterizar los materiales. En el curso no se estudian en un capítulo aparte: cada estudiante los consulta y los presenta a medida que aparecen los temas relacionados, y forman parte de la participación en clase. El objetivo es que el geólogo sepa qué ensayo pedir, cómo interpretarlo y cuáles son sus limitaciones, más que dominar los detalles de su ejecución.</p>
+<section id="exploracion-del-subsuelo">
+<h2>Exploración del subsuelo<a class="headerlink" href="#exploracion-del-subsuelo" title="Link to this heading">#</a></h2>
+<p>La exploración busca definir la estratigrafía, la posición del nivel freático y las propiedades de los materiales en el volumen afectado por la obra. Su diseño, es decir, el número, la ubicación y la profundidad de los sondeos, debe partir del modelo geológico preliminar. Los <strong>apiques</strong> o calicatas permiten observar directamente el perfil y tomar muestras de bloque inalteradas, pero se limitan a pocos metros. Los <strong>sondeos</strong> con barreno, lavado o rotación permiten llegar a mayores profundidades; en roca, la perforación con recuperación de núcleos permite calcular el RQD y describir las discontinuidades. La NSR-10 (capítulo H.3) establece el número mínimo y la profundidad de los sondeos según la categoría de la unidad de construcción.</p>
+<section id="toma-de-muestras">
+<h3>Toma de muestras<a class="headerlink" href="#toma-de-muestras" title="Link to this heading">#</a></h3>
+<p>Las <strong>muestras alteradas</strong> conservan la composición pero no la estructura del suelo, y sirven para ensayos de clasificación (granulometría, límites, humedad). Las <strong>muestras inalteradas</strong> conservan en lo posible la estructura, la humedad y el estado de esfuerzos, y son indispensables para ensayos de resistencia y compresibilidad. Se toman con tubos de pared delgada (Shelby) en suelos finos, con muestreadores de pistón en suelos blandos o tallando bloques en apiques. Ninguna muestra es totalmente inalterada: la relajación de esfuerzos, la perturbación mecánica y los cambios de humedad la afectan, en especial en suelos residuales con cementación débil.</p>
+</section>
+</section>
+<section id="ensayos-de-campo">
+<h2>Ensayos de campo<a class="headerlink" href="#ensayos-de-campo" title="Link to this heading">#</a></h2>
+<section id="ensayo-de-penetracion-estandar-spt">
+<h3>Ensayo de penetración estándar (SPT)<a class="headerlink" href="#ensayo-de-penetracion-estandar-spt" title="Link to this heading">#</a></h3>
+<p>Se hinca un muestreador de cuchara partida con un martillo de 63,5 kg que cae 76 cm, y se cuenta el número de golpes necesario para avanzar 30 cm después de un asentamiento inicial de 15 cm: el valor <span class="math notranslate nohighlight">\(N\)</span>. Es el ensayo de campo más usado en Colombia, por su sencillez y porque permite recuperar una muestra alterada. El valor de <span class="math notranslate nohighlight">\(N\)</span> se corrige por energía del martillo (<span class="math notranslate nohighlight">\(N_{60}\)</span>) y por esfuerzo efectivo, y se correlaciona con la densidad relativa y el ángulo de fricción de las arenas, la consistencia de las arcillas, la capacidad portante y el potencial de licuación. En suelos con gravas y bloques, como los coluviones, sus resultados son poco confiables.</p>
+</section>
+<section id="ensayo-de-penetracion-de-cono-cpt-y-cptu">
+<h3>Ensayo de penetración de cono (CPT y CPTu)<a class="headerlink" href="#ensayo-de-penetracion-de-cono-cpt-y-cptu" title="Link to this heading">#</a></h3>
+<p>Un cono con punta de 60° y 10 cm² de área se hinca a velocidad constante, midiendo de manera continua la resistencia de punta y la fricción lateral, y en el piezocono (CPTu) también la presión de poros. Da un perfil continuo y detallado de la estratigrafía, muy útil para detectar lentes delgados, pero no recupera muestras y no penetra materiales gruesos o cementados.</p>
+</section>
+<section id="ensayos-de-permeabilidad">
+<h3>Ensayos de permeabilidad<a class="headerlink" href="#ensayos-de-permeabilidad" title="Link to this heading">#</a></h3>
+<p>El <strong>ensayo Lefranc</strong> se realiza en un tramo de sondeo en suelo, inyectando o extrayendo agua con carga constante o variable, para obtener la conductividad hidráulica. El <strong>ensayo Lugeon</strong> se realiza en roca, inyectando agua a presión en un tramo aislado con obturadores. Su resultado se expresa en unidades Lugeon: una unidad equivale a una absorción de 1 litro por minuto y por metro de sondeo a una presión de 10 bar, aproximadamente <span class="math notranslate nohighlight">\(10^{-7}\)</span> m/s. Además, los ensayos de bombeo en pozos dan la conductividad promedio de un acuífero a mayor escala.</p>
+</section>
+<section id="prospeccion-geofisica">
+<h3>Prospección geofísica<a class="headerlink" href="#prospeccion-geofisica" title="Link to this heading">#</a></h3>
+<p>Los métodos geofísicos son indirectos, pero cubren grandes áreas y volúmenes a bajo costo, y permiten extender lateralmente la información de los sondeos. Los <strong>sondeos eléctricos verticales</strong> (SEV) y la tomografía eléctrica miden la resistividad del terreno, que depende del contenido de agua, la porosidad, el contenido de arcilla y la salinidad; sirven para localizar el nivel freático, el contacto con la roca y las zonas saturadas en laderas. Los <strong>métodos sísmicos</strong> de refracción y de ondas superficiales (MASW) miden la velocidad de las ondas, que se relaciona con la rigidez del material; permiten estimar la profundidad de la roca y su grado de fracturación, y son la base para clasificar el perfil de suelo para el diseño sísmico. El georradar, la gravimetría y la magnetometría tienen aplicaciones más específicas. Toda interpretación geofísica debe calibrarse con sondeos.</p>
+</section>
+<section id="ensayos-in-situ-de-resistencia-y-deformabilidad">
+<h3>Ensayos in situ de resistencia y deformabilidad<a class="headerlink" href="#ensayos-in-situ-de-resistencia-y-deformabilidad" title="Link to this heading">#</a></h3>
+<p>La <strong>veleta</strong> de campo mide la resistencia no drenada de arcillas blandas. El <strong>presiómetro</strong> y el dilatómetro miden la deformabilidad del suelo en las paredes de un sondeo. El <strong>ensayo de placa</strong> mide el asentamiento de una placa rígida bajo carga, y el martillo de Schmidt y el ensayo de carga puntual estiman la resistencia de la roca en campo.</p>
+</section>
+<section id="instrumentacion">
+<h3>Instrumentación<a class="headerlink" href="#instrumentacion" title="Link to this heading">#</a></h3>
+<p>La instrumentación permite medir el comportamiento del terreno durante y después de la construcción, y es la base del método observacional de Peck. Los <strong>piezómetros</strong> miden la presión de poros; los <strong>inclinómetros</strong> miden los desplazamientos horizontales a lo largo de un sondeo y permiten localizar la superficie de falla de un deslizamiento; los <strong>extensómetros</strong> miden desplazamientos entre puntos; y las <strong>celdas de asentamiento</strong> y las mediciones topográficas o con GNSS registran los movimientos superficiales. En laderas inestables, la combinación de inclinómetros, piezómetros y pluviómetros es la herramienta más eficaz para entender el mecanismo y diseñar sistemas de alerta.</p>
+</section>
+</section>
+<section id="ensayos-de-laboratorio">
+<h2>Ensayos de laboratorio<a class="headerlink" href="#ensayos-de-laboratorio" title="Link to this heading">#</a></h2>
+<section id="ensayos-de-clasificacion">
+<h3>Ensayos de clasificación<a class="headerlink" href="#ensayos-de-clasificacion" title="Link to this heading">#</a></h3>
+<p>La <strong>humedad natural</strong> se obtiene secando la muestra al horno a 110 °C. Los <strong>límites de Atterberg</strong> se determinan con la cuchara de Casagrande o el penetrómetro de cono para el límite líquido, y rolando cilindros de 3 mm para el límite plástico. La <strong>granulometría</strong> se determina por tamizado y por hidrómetro, y la <strong>gravedad específica</strong>, con el picnómetro. Con estos ensayos se clasifica el suelo según el USCS (capítulo <a class="reference internal" href="02_suelos.html#cap-suelos"><span class="std std-ref">Mecánica de suelos: origen, descripción y clasificación</span></a>).</p>
+</section>
+<section id="compresion-simple">
+<h3>Compresión simple<a class="headerlink" href="#compresion-simple" title="Link to this heading">#</a></h3>
+<p>Se aplica una carga axial a una probeta sin confinamiento hasta la falla. En suelos cohesivos saturados da la resistencia no drenada, <span class="math notranslate nohighlight">\(c_u=q_u/2\)</span>; en rocas, la resistencia a la compresión uniaxial <span class="math notranslate nohighlight">\(\sigma_{ci}\)</span>, que es el parámetro básico de las clasificaciones geomecánicas y del criterio de Hoek-Brown.</p>
+</section>
+<section id="corte-directo">
+<h3>Corte directo<a class="headerlink" href="#corte-directo" title="Link to this heading">#</a></h3>
+<p>Mide la resistencia al corte en un plano impuesto, bajo esfuerzo normal constante (capítulo <a class="reference internal" href="11_resistencia_corte.html#cap-corte"><span class="std std-ref">Resistencia al cortante de los suelos</span></a>). Con reversiones o en el equipo de corte anular permite medir la resistencia residual. En roca se usa para medir la resistencia de las discontinuidades.</p>
+</section>
+<section id="ensayos-triaxiales-uu-cu-y-cd">
+<h3>Ensayos triaxiales UU, CU y CD<a class="headerlink" href="#ensayos-triaxiales-uu-cu-y-cd" title="Link to this heading">#</a></h3>
+<p>Permiten controlar el drenaje y medir la presión de poros, y reproducir diferentes trayectorias de esfuerzos. El ensayo UU da la resistencia no drenada para el análisis a corto plazo; el CU con medición de presión de poros da los parámetros totales y efectivos; y el CD, los parámetros efectivos para el análisis a largo plazo (capítulo <a class="reference internal" href="11_resistencia_corte.html#cap-corte"><span class="std std-ref">Resistencia al cortante de los suelos</span></a>).</p>
+</section>
+<section id="consolidacion">
+<h3>Consolidación<a class="headerlink" href="#consolidacion" title="Link to this heading">#</a></h3>
+<p>El ensayo edométrico da la curva de compresibilidad, los índices <span class="math notranslate nohighlight">\(C_c\)</span> y <span class="math notranslate nohighlight">\(C_s\)</span>, la presión de preconsolidación y el coeficiente de consolidación <span class="math notranslate nohighlight">\(c_v\)</span> (capítulo <a class="reference internal" href="09_consolidacion.html#cap-consolidacion"><span class="std std-ref">Consolidación y asentamientos</span></a>).</p>
+</section>
+<section id="compactacion">
+<h3>Compactación<a class="headerlink" href="#compactacion" title="Link to this heading">#</a></h3>
+<p>Los ensayos Proctor estándar y modificado definen el peso unitario seco máximo y la humedad óptima de los materiales para rellenos (capítulo <a class="reference internal" href="08_compactacion.html#cap-compactacion"><span class="std std-ref">Compactación</span></a>).</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="15_empujes.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Empujes de tierras y muros de contención</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="referencias.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Referencias</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exploracion-del-subsuelo">Exploración del subsuelo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toma-de-muestras">Toma de muestras</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-campo">Ensayos de campo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayo-de-penetracion-estandar-spt">Ensayo de penetración estándar (SPT)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayo-de-penetracion-de-cono-cpt-y-cptu">Ensayo de penetración de cono (CPT y CPTu)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-permeabilidad">Ensayos de permeabilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prospeccion-geofisica">Prospección geofísica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-in-situ-de-resistencia-y-deformabilidad">Ensayos in situ de resistencia y deformabilidad</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instrumentacion">Instrumentación</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-laboratorio">Ensayos de laboratorio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-clasificacion">Ensayos de clasificación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compresion-simple">Compresión simple</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corte-directo">Corte directo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-triaxiales-uu-cu-y-cd">Ensayos triaxiales UU, CU y CD</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consolidacion">Consolidación</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compactacion">Compactación</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Desarrollado por <a href="https://github.com/edieraristizabal">Edier Aristizábal</a>, Facultad de Minas, Universidad Nacional de Colombia.
+<a href="https://edieraristizabal.github.io/Geotecnia/">Página del curso</a> ·
+<a href="https://edieraristizabal.github.io/Geotecnia/html/Geotecnia.html">Diapositivas</a></p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

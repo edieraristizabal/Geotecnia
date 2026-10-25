@@ -1,0 +1,739 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Referencias &#8212; Geotecnia para geólogos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'referencias';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://edieraristizabal.github.io/Geotecnia/libro/referencias.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Apéndice: ensayos geotécnicos" href="A_ensayos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Geotecnia para geólogos - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Geotecnia para geólogos - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Geotecnia para geólogos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte I: Los materiales geológicos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_introduccion.html">Introducción a la geotecnia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_suelos.html">Mecánica de suelos: origen, descripción y clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_rocas.html">Mecánica de rocas: el macizo rocoso y su clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_agua.html">El agua en el suelo y en el macizo rocoso</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte II: Esfuerzos y deformaciones</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_esfuerzos.html">Estado de esfuerzos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_esfuerzos_efectivos.html">Esfuerzos efectivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_distribucion.html">Distribución de esfuerzos verticales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_compactacion.html">Compactación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_consolidacion.html">Consolidación y asentamientos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_cimentaciones.html">Cimentaciones</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte III: Resistencia</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_resistencia_corte.html">Resistencia al cortante de los suelos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_resistencia_rocas.html">Resistencia de las rocas y de los macizos rocosos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte IV: Laderas y estructuras de contención</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13_movimientos_masa.html">Movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_estabilidad.html">Estabilidad de laderas y taludes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_empujes.html">Empujes de tierras y muros de contención</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndices</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A_ensayos.html">Apéndice: ensayos geotécnicos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Referencias</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Repositorio de origen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/edit/main/libro/referencias.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/issues/new?title=Issue%20on%20page%20%2Freferencias.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Abrir un problema"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/referencias.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Referencias</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="referencias">
+<h1>Referencias<a class="headerlink" href="#referencias" title="Link to this heading">#</a></h1>
+<div class="docutils container" id="id1">
+<div role="list" class="citation-list">
+<div class="citation" id="id2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ALSB02<span class="fn-bracket">]</span></span>
+<p>Lee W. Abramson, Thomas S. Lee, Sunil Sharma, and Glenn M. Boyce. <em>Slope Stability and Stabilization Methods</em>. John Wiley &amp; Sons, New York, 2 edition, 2002.</p>
+</div>
+<div class="citation" id="id5" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>AMV10<span class="fn-bracket">]</span></span>
+<p>Edier Aristizábal, Hernán Martínez, and Jaime Ignacio Vélez. Una revisión sobre el estudio de movimientos en masa detonados por lluvias. <em>Revista de la Academia Colombiana de Ciencias Exactas, Físicas y Naturales</em>, 34(131):209–227, 2010.</p>
+</div>
+<div class="citation" id="id4" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ARY05<span class="fn-bracket">]</span></span>
+<p>Edier Aristizábal, Barry Roser, and Shuichiro Yokota. Tropical chemical weathering of hillslope deposits and bedrock source in the Aburrá Valley, northern Colombian Andes. <em>Engineering Geology</em>, 81(4):389–406, 2005.</p>
+</div>
+<div class="citation" id="id6" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>AVG+11<span class="fn-bracket">]</span></span>
+<p>Edier Aristizábal, Yamile Valencia, Alexander Guerra, Marcela Vélez, and Oscar Echeverri. Caracterización geotécnica de perfiles de meteorización desarrollados sobre rocas ígneas en ambientes tropicales. <em>Boletín de Ciencias de la Tierra</em>, pages 47–60, 2011.</p>
+</div>
+<div class="citation" id="id7" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BC03<span class="fn-bracket">]</span></span>
+<p>Gregory B. Baecher and John T. Christian. <em>Reliability and Statistics in Geotechnical Engineering</em>. John Wiley &amp; Sons, Chichester, 2003.</p>
+</div>
+<div class="citation" id="id8" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>BC77<span class="fn-bracket">]</span></span>
+<p>Nick Barton and V. Choubey. The shear strength of rock joints in theory and practice. <em>Rock Mechanics</em>, 10:1–54, 1977.</p>
+</div>
+<div class="citation" id="id9" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bie89<span class="fn-bracket">]</span></span>
+<p>Z. T. Bieniawski. <em>Engineering Rock Mass Classifications</em>. John Wiley &amp; Sons, New York, 1989.</p>
+</div>
+<div class="citation" id="id10" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Bis55<span class="fn-bracket">]</span></span>
+<p>Alan W. Bishop. The use of the slip circle in the stability analysis of slopes. <em>Géotechnique</em>, 5(1):7–17, 1955.</p>
+</div>
+<div class="citation" id="id11" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Chi89<span class="fn-bracket">]</span></span>
+<p>Arnoldo Chica. <em>Análisis geotécnico de taludes</em>. École des Mines de Nancy, 1989.</p>
+</div>
+<div class="citation" id="id12" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Cru91<span class="fn-bracket">]</span></span>
+<p>David M. Cruden. A simple definition of a landslide. <em>Bulletin of the International Association of Engineering Geology</em>, 43:27–29, 1991.</p>
+</div>
+<div class="citation" id="id13" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>CV96<span class="fn-bracket">]</span></span>
+<p>David M. Cruden and David J. Varnes. Landslide types and processes. In A. K. Turner and R. L. Schuster, editors, <em>Landslides: Investigation and Mitigation</em>, Special Report 247, pages 36–75. Transportation Research Board, National Research Council, Washington D.C., 1996.</p>
+</div>
+<div class="citation" id="id15" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Das99<span class="fn-bracket">]</span></span>
+<p>Braja M. Das. <em>Principios de ingeniería de cimentaciones</em>. International Thomson Editores, México, 4 edition, 1999.</p>
+</div>
+<div class="citation" id="id14" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Das01<span class="fn-bracket">]</span></span>
+<p>Braja M. Das. <em>Fundamentos de ingeniería geotécnica</em>. Thomson Learning, México, 2001.</p>
+</div>
+<div class="citation" id="id16" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DHPC67<span class="fn-bracket">]</span></span>
+<p>D. U. Deere, A. J. Hendron, F. D. Patton, and E. J. Cording. Design of surface and near surface construction in rock. In C. Fairhurst, editor, <em>Failure and Breakage of Rock, Proceedings of the 8th U.S. Symposium on Rock Mechanics</em>, 237–302. New York, 1967. AIME.</p>
+</div>
+<div class="citation" id="id17" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DP71<span class="fn-bracket">]</span></span>
+<p>D. U. Deere and F. D. Patton. Slope stability in residual soils. In <em>Proceedings of the 4th Panamerican Conference on Soil Mechanics and Foundation Engineering</em>, volume 1, 87–170. San Juan, Puerto Rico, 1971.</p>
+</div>
+<div class="citation" id="id19" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>DW05<span class="fn-bracket">]</span></span>
+<p>J. Michael Duncan and Stephen G. Wright. <em>Soil Strength and Slope Stability</em>. John Wiley &amp; Sons, Hoboken, 2005.</p>
+</div>
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>FR93<span class="fn-bracket">]</span></span>
+<p>D. G. Fredlund and H. Rahardjo. <em>Soil Mechanics for Unsaturated Soils</em>. John Wiley &amp; Sons, New York, 1993.</p>
+</div>
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>GdVFOO02<span class="fn-bracket">]</span></span>
+<p>Luis I. González de Vallejo, Mercedes Ferrer, Luis Ortuño, and Carlos Oteo. <em>Ingeniería geológica</em>. Pearson Educación, Madrid, 2002.</p>
+</div>
+<div class="citation" id="id27" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Hoe07<span class="fn-bracket">]</span></span>
+<p>Evert Hoek. <em>Practical Rock Engineering</em>. RocScience, 2007.</p>
+</div>
+<div class="citation" id="id25" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HB81<span class="fn-bracket">]</span></span>
+<p>Evert Hoek and John Bray. <em>Rock Slope Engineering</em>. Institution of Mining and Metallurgy, London, 3 edition, 1981.</p>
+</div>
+<div class="citation" id="id26" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HB80<span class="fn-bracket">]</span></span>
+<p>Evert Hoek and E. T. Brown. <em>Underground Excavations in Rock</em>. Institution of Mining and Metallurgy, London, 1980.</p>
+</div>
+<div class="citation" id="id24" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HCTC02<span class="fn-bracket">]</span></span>
+<p>Evert Hoek, Carlos Carranza-Torres, and Brent Corkum. Hoek-brown failure criterion: 2002 edition. In <em>Proceedings of the 5th North American Rock Mechanics Symposium</em>, 267–273. Toronto, 2002.</p>
+</div>
+<div class="citation" id="id23" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HKB95<span class="fn-bracket">]</span></span>
+<p>Evert Hoek, P. K. Kaiser, and W. F. Bawden. <em>Support of Underground Excavations in Hard Rock</em>. Balkema, Rotterdam, 1995.</p>
+</div>
+<div class="citation" id="id28" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>HK81<span class="fn-bracket">]</span></span>
+<p>Robert D. Holtz and William D. Kovacs. <em>An Introduction to Geotechnical Engineering</em>. Prentice-Hall, Englewood Cliffs, 1981.</p>
+</div>
+<div class="citation" id="id30" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LW69<span class="fn-bracket">]</span></span>
+<p>T. William Lambe and Robert V. Whitman. <em>Soil Mechanics</em>. John Wiley &amp; Sons, New York, 1969.</p>
+</div>
+<div class="citation" id="id31" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>LL04<span class="fn-bracket">]</span></span>
+<p>Ning Lu and William J. Likos. <em>Unsaturated Soil Mechanics</em>. John Wiley &amp; Sons, Hoboken, 2004.</p>
+</div>
+<div class="citation" id="id18" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>MD94<span class="fn-bracket">]</span></span>
+<p>David R. Montgomery and William E. Dietrich. A physically based model for the topographic control on shallow landsliding. <em>Water Resources Research</em>, 30(4):1153–1171, 1994.</p>
+</div>
+<div class="citation" id="id32" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>NY82<span class="fn-bracket">]</span></span>
+<p>H. W. Nesbitt and G. M. Young. Early Proterozoic climates and plate motions inferred from major element chemistry of lutites. <em>Nature</em>, 299:715–717, 1982.</p>
+</div>
+<div class="citation" id="id34" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Pal82<span class="fn-bracket">]</span></span>
+<p>Arild Palmström. The volumetric joint count: a useful and simple measure of the degree of rock mass jointing. In <em>Proceedings of the 4th Congress of the International Association of Engineering Geology</em>, volume 2, 221–228. New Delhi, 1982.</p>
+</div>
+<div class="citation" id="id35" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>PC87<span class="fn-bracket">]</span></span>
+<p>Thomas C. Pierson and John E. Costa. A rheologic classification of subaerial sediment-water flows. <em>Reviews in Engineering Geology</em>, 7:1–12, 1987.</p>
+</div>
+<div class="citation" id="id36" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Reg77<span class="fn-bracket">]</span></span>
+<p>A. R. Reginatto. Suelos colapsibles. In <em>Memorias del V Congreso Panamericano de Mecánica de Suelos e Ingeniería de Fundaciones</em>. Buenos Aires, 1977.</p>
+</div>
+<div class="citation" id="id37" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ros75<span class="fn-bracket">]</span></span>
+<p>Emilio Rosenblueth. Point estimates for probability moments. <em>Proceedings of the National Academy of Sciences</em>, 72(10):3812–3814, 1975.</p>
+</div>
+<div class="citation" id="id38" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>SvW96<span class="fn-bracket">]</span></span>
+<p>Rob Soeters and Cees J. van Westen. Slope instability recognition, analysis and zonation. In A. K. Turner and R. L. Schuster, editors, <em>Landslides: Investigation and Mitigation</em>, Special Report 247, pages 129–177. Transportation Research Board, National Research Council, Washington D.C., 1996.</p>
+</div>
+<div class="citation" id="id39" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>TPM96<span class="fn-bracket">]</span></span>
+<p>Karl Terzaghi, Ralph B. Peck, and Gholamreza Mesri. <em>Soil Mechanics in Engineering Practice</em>. John Wiley &amp; Sons, New York, 3 edition, 1996.</p>
+</div>
+<div class="citation" id="id40" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Var78<span class="fn-bracket">]</span></span>
+<p>David J. Varnes. Slope movement types and processes. In R. L. Schuster and R. J. Krizek, editors, <em>Landslides: Analysis and Control</em>, Special Report 176, pages 11–33. Transportation Research Board, National Academy of Sciences, Washington D.C., 1978.</p>
+</div>
+<div class="citation" id="id41" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Ves73<span class="fn-bracket">]</span></span>
+<p>Aleksandar S. Vesic. Analysis of ultimate loads of shallow foundations. <em>Journal of the Soil Mechanics and Foundations Division, ASCE</em>, 99(SM1):45–73, 1973.</p>
+</div>
+<div class="citation" id="id42" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>WS03<span class="fn-bracket">]</span></span>
+<p>Gonghui Wang and Kyoji Sassa. Pore-pressure generation and movement of rainfall-induced landslides: effects of grain size and fine-particle content. <em>Engineering Geology</em>, 69:109–125, 2003.</p>
+</div>
+<div class="citation" id="id43" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Wes10<span class="fn-bracket">]</span></span>
+<p>Laurence D. Wesley. <em>Geotechnical Engineering in Residual Soils</em>. John Wiley &amp; Sons, Hoboken, 2010.</p>
+</div>
+<div class="citation" id="id3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>Anon95<span class="fn-bracket">]</span></span>
+<p>Anon. The description and classification of weathered rocks for engineering purposes. <em>Quarterly Journal of Engineering Geology</em>, 28(3):207–242, 1995. Geological Society Engineering Group Working Party Report.</p>
+</div>
+<div class="citation" id="id33" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>AsociacionCdISismica10<span class="fn-bracket">]</span></span>
+<p>Asociación Colombiana de Ingeniería Sísmica. <em>Reglamento Colombiano de Construcción Sismo Resistente NSR-10, Título H: Estudios geotécnicos</em>. Ministerio de Ambiente, Vivienda y Desarrollo Territorial, Bogotá, 2010.</p>
+</div>
+<div class="citation" id="id29" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ISRM78<span class="fn-bracket">]</span></span>
+<p>ISRM. Suggested methods for the quantitative description of discontinuities in rock masses. <em>International Journal of Rock Mechanics and Mining Sciences &amp; Geomechanics Abstracts</em>, 15:319–368, 1978.</p>
+</div>
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>ProyectoMAndinoGplCAndinas07<span class="fn-bracket">]</span></span>
+<p>Proyecto Multinacional Andino: Geociencias para las Comunidades Andinas. <em>Movimientos en masa en la región andina: una guía para la evaluación de amenazas</em>. Publicación Geológica Multinacional 4. Servicio Nacional de Geología y Minería, 2007.</p>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="A_ensayos.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Apéndice: ensayos geotécnicos</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Desarrollado por <a href="https://github.com/edieraristizabal">Edier Aristizábal</a>, Facultad de Minas, Universidad Nacional de Colombia.
+<a href="https://edieraristizabal.github.io/Geotecnia/">Página del curso</a> ·
+<a href="https://edieraristizabal.github.io/Geotecnia/html/Geotecnia.html">Diapositivas</a></p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

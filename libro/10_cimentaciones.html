@@ -1,0 +1,770 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Cimentaciones &#8212; Geotecnia para geólogos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '10_cimentaciones';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://edieraristizabal.github.io/Geotecnia/libro/10_cimentaciones.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Resistencia al cortante de los suelos" href="11_resistencia_corte.html" />
+    <link rel="prev" title="Consolidación y asentamientos" href="09_consolidacion.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Geotecnia para geólogos - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Geotecnia para geólogos - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Geotecnia para geólogos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte I: Los materiales geológicos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_introduccion.html">Introducción a la geotecnia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_suelos.html">Mecánica de suelos: origen, descripción y clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_rocas.html">Mecánica de rocas: el macizo rocoso y su clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_agua.html">El agua en el suelo y en el macizo rocoso</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte II: Esfuerzos y deformaciones</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_esfuerzos.html">Estado de esfuerzos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_esfuerzos_efectivos.html">Esfuerzos efectivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_distribucion.html">Distribución de esfuerzos verticales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_compactacion.html">Compactación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_consolidacion.html">Consolidación y asentamientos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Cimentaciones</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte III: Resistencia</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="11_resistencia_corte.html">Resistencia al cortante de los suelos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_resistencia_rocas.html">Resistencia de las rocas y de los macizos rocosos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte IV: Laderas y estructuras de contención</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13_movimientos_masa.html">Movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_estabilidad.html">Estabilidad de laderas y taludes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_empujes.html">Empujes de tierras y muros de contención</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A_ensayos.html">Apéndice: ensayos geotécnicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Repositorio de origen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/edit/main/libro/10_cimentaciones.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/issues/new?title=Issue%20on%20page%20%2F10_cimentaciones.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Abrir un problema"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/10_cimentaciones.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Cimentaciones</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-y-criterios-de-diseno">Definición y criterios de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-cimentaciones">Tipos de cimentaciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacidad-de-carga">Capacidad de carga</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modos-de-falla">Modos de falla</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teoria-de-terzaghi">Teoría de Terzaghi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-general">Ecuación general</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#efecto-del-nivel-freatico">Efecto del nivel freático</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condiciones-no-drenadas">Condiciones no drenadas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excentricidad">Excentricidad</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-seguridad">Factor de seguridad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacidad-de-carga-de-pilotes">Capacidad de carga de pilotes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asentamientos-inmediatos">Asentamientos inmediatos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="cimentaciones">
+<span id="cap-cimentaciones"></span><h1>Cimentaciones<a class="headerlink" href="#cimentaciones" title="Link to this heading">#</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p><strong>Objetivos de aprendizaje</strong></p>
+<ul class="simple">
+<li><p>Diferenciar los tipos de cimentaciones superficiales y profundas, y los criterios para elegirlas.</p></li>
+<li><p>Reconocer los modos de falla por capacidad portante.</p></li>
+<li><p>Calcular la capacidad de carga última y admisible con las ecuaciones de Terzaghi y la ecuación general.</p></li>
+<li><p>Considerar el efecto del nivel freático, de la excentricidad y de las condiciones no drenadas.</p></li>
+<li><p>Estimar la capacidad de pilotes y los asentamientos inmediatos.</p></li>
+</ul>
+</div>
+<section id="definicion-y-criterios-de-diseno">
+<h2>Definición y criterios de diseño<a class="headerlink" href="#definicion-y-criterios-de-diseno" title="Link to this heading">#</a></h2>
+<p>La cimentación es la parte inferior de una estructura cuya función es transferir la carga al suelo o a la roca sobre la que descansa. El suelo puede verse como una prolongación de la estructura, generalmente la parte menos resistente y más deformable, de modo que la cimentación debe repartir y transmitir al terreno presiones compatibles con su resistencia y su deformabilidad. El diseño de una cimentación debe cumplir tres criterios: que el factor de seguridad entre la resistencia del suelo y las presiones transmitidas sea adecuado, de modo que no ocurra una falla por corte; que los asentamientos totales y diferenciales sean tolerables para la estructura; y que la construcción no afecte a las edificaciones vecinas.</p>
+</section>
+<section id="tipos-de-cimentaciones">
+<h2>Tipos de cimentaciones<a class="headerlink" href="#tipos-de-cimentaciones" title="Link to this heading">#</a></h2>
+<p>Cuando el suelo tiene resistencia adecuada a poca profundidad se usan <strong>cimentaciones superficiales</strong> o directas, que reparten las cargas en un plano horizontal cercano a la superficie, con una relación entre la profundidad de desplante y el ancho <span class="math notranslate nohighlight">\(D_f/B\le1\)</span>. Las <strong>zapatas aisladas</strong> soportan columnas individuales; las <strong>zapatas corridas</strong> soportan muros o hileras de columnas; y las <strong>losas de cimentación</strong> cubren toda el área de la estructura y se usan cuando las cargas son altas o el suelo es débil, o para reducir los asentamientos diferenciales.</p>
+<p>Cuando los estratos superficiales no tienen la competencia suficiente, se usan <strong>cimentaciones profundas</strong> que transmiten la carga a estratos más resistentes. Los <strong>pilotes</strong> son elementos esbeltos de madera, concreto o acero que transmiten la carga por <strong>punta</strong>, apoyándose en un estrato firme, o por <strong>fricción</strong> a lo largo del fuste en suelos cohesivos. Las <strong>pilas</strong> o caissons son elementos de mayor diámetro excavados y fundidos en el sitio.</p>
+</section>
+<section id="capacidad-de-carga">
+<h2>Capacidad de carga<a class="headerlink" href="#capacidad-de-carga" title="Link to this heading">#</a></h2>
+<p>Cuando una cimentación transmite carga al terreno se producen asentamientos. Si la carga aumenta lo suficiente se forman en el suelo superficies de falla a lo largo de las cuales se supera la resistencia al corte, y se produce el colapso: es la <strong>falla por capacidad portante</strong>. La carga que la produce depende de la resistencia al corte del suelo, de su peso unitario, de las dimensiones y la forma de la cimentación, de la profundidad de desplante y de la posición del nivel freático. No es una propiedad intrínseca del suelo sino de la interacción entre el suelo y la cimentación.</p>
+<section id="modos-de-falla">
+<h3>Modos de falla<a class="headerlink" href="#modos-de-falla" title="Link to this heading">#</a></h3>
+<p><span class="bibtex-citation" id="id1">Vesic [<a class="reference internal" href="referencias.html#id41" title="Aleksandar S. Vesic. Analysis of ultimate loads of shallow foundations. Journal of the Soil Mechanics and Foundations Division, ASCE, 99(SM1):45–73, 1973.">1973</a>]</span> describió tres modos de falla. La <strong>falla por cortante general</strong> ocurre en arenas densas y arcillas rígidas: es súbita y catastrófica, con superficies de falla bien definidas que llegan a la superficie y producen levantamiento del terreno a los lados. La <strong>falla por cortante local</strong> ocurre en arenas medias a sueltas y en arcillas blandas: la superficie de falla solo está bien definida bajo la zapata. La <strong>falla por punzonamiento</strong> ocurre en arenas muy sueltas y suelos cohesivos blandos: la cimentación se hunde verticalmente con movimientos repentinos, sin que se formen superficies de falla visibles. El modo depende de la compacidad relativa del suelo y de la relación <span class="math notranslate nohighlight">\(D_f/B\)</span>.</p>
+<figure class="align-default" id="fig-vesic">
+<a class="reference internal image-reference" href="_images/s23_0634.webp"><img alt="_images/s23_0634.webp" src="_images/s23_0634.webp" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 43 </span><span class="caption-text">Modos de falla en función de la densidad relativa y de la profundidad relativa. Fuente: Vesic (1973).</span><a class="headerlink" href="#fig-vesic" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="teoria-de-terzaghi">
+<h3>Teoría de Terzaghi<a class="headerlink" href="#teoria-de-terzaghi" title="Link to this heading">#</a></h3>
+<p>Terzaghi (1943) extendió la solución de Prandtl para una cimentación corrida, rugosa y superficial, despreciando la resistencia del suelo por encima del nivel de desplante, que se reemplaza por una sobrecarga <span class="math notranslate nohighlight">\(q=\gamma D_f\)</span>. La masa en falla se divide en tres zonas: una cuña triangular bajo la cimentación en equilibrio elástico (zona I), dos zonas de corte radial limitadas por espirales logarítmicas (zona II) y dos zonas de empuje pasivo de Rankine (zona III).</p>
+<figure class="align-default" id="fig-falla-general">
+<a class="reference internal image-reference" href="_images/s20_0628.webp"><img alt="_images/s20_0628.webp" src="_images/s20_0628.webp" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 44 </span><span class="caption-text">Superficie de falla por cortante general bajo una cimentación corrida.</span><a class="headerlink" href="#fig-falla-general" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>La capacidad de carga última para falla por cortante general es:</p>
+<div class="math notranslate nohighlight">
+\[
+q_u=c\,N_c+q\,N_q+\tfrac12\,\gamma\,B\,N_\gamma\quad\text{(corrida)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+q_u=1{,}3\,c\,N_c+q\,N_q+0{,}4\,\gamma\,B\,N_\gamma\quad\text{(cuadrada)}\qquad
+q_u=1{,}3\,c\,N_c+q\,N_q+0{,}3\,\gamma\,B\,N_\gamma\quad\text{(circular)}
+\]</div>
+<p>Los factores de capacidad de carga dependen solo del ángulo de fricción. Para <span class="math notranslate nohighlight">\(\phi=0\)</span>, <span class="math notranslate nohighlight">\(N_c=5{,}7\)</span>, <span class="math notranslate nohighlight">\(N_q=1\)</span> y <span class="math notranslate nohighlight">\(N_\gamma=0\)</span>; para <span class="math notranslate nohighlight">\(\phi=30°\)</span>, <span class="math notranslate nohighlight">\(N_c=37{,}2\)</span>, <span class="math notranslate nohighlight">\(N_q=22{,}5\)</span> y <span class="math notranslate nohighlight">\(N_\gamma=19{,}1\)</span>. El primer término representa la contribución de la cohesión, el segundo la de la sobrecarga y el tercero la del peso del suelo bajo la cimentación.</p>
+<p>Para falla por cortante local, Terzaghi propuso reducir los parámetros de resistencia: <span class="math notranslate nohighlight">\(c'=\tfrac23c\)</span> y <span class="math notranslate nohighlight">\(\phi'=\tan^{-1}(\tfrac23\tan\phi)\)</span>.</p>
+</section>
+<section id="ecuacion-general">
+<h3>Ecuación general<a class="headerlink" href="#ecuacion-general" title="Link to this heading">#</a></h3>
+<p>La ecuación de Terzaghi se generalizó con los trabajos de Meyerhof (1963), Hansen (1970) y <span class="bibtex-citation" id="id2">Vesic [<a class="reference internal" href="referencias.html#id41" title="Aleksandar S. Vesic. Analysis of ultimate loads of shallow foundations. Journal of the Soil Mechanics and Foundations Division, ASCE, 99(SM1):45–73, 1973.">1973</a>]</span>, que incorporan factores de forma (<span class="math notranslate nohighlight">\(F_s\)</span>), profundidad (<span class="math notranslate nohighlight">\(F_d\)</span>) e inclinación de la carga (<span class="math notranslate nohighlight">\(F_i\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[
+q_u=c\,N_c\,F_{cs}F_{cd}F_{ci}+q\,N_q\,F_{qs}F_{qd}F_{qi}+\tfrac12\gamma B N_\gamma F_{\gamma s}F_{\gamma d}F_{\gamma i}
+\]</div>
+<p>con <span class="math notranslate nohighlight">\(N_q=\tan^2(45°+\phi/2)\,e^{\pi\tan\phi}\)</span>, <span class="math notranslate nohighlight">\(N_c=(N_q-1)\cot\phi\)</span> y <span class="math notranslate nohighlight">\(N_\gamma=2(N_q+1)\tan\phi\)</span>.</p>
+</section>
+<section id="efecto-del-nivel-freatico">
+<h3>Efecto del nivel freático<a class="headerlink" href="#efecto-del-nivel-freatico" title="Link to this heading">#</a></h3>
+<p>El nivel freático reduce la capacidad de carga porque disminuye el peso unitario efectivo. Si está sobre el nivel de desplante, en el término de sobrecarga se usa <span class="math notranslate nohighlight">\(q=\gamma D_1+\gamma'D_2\)</span> y en el término de peso <span class="math notranslate nohighlight">\(\gamma'\)</span>. Si está bajo la cimentación a una profundidad <span class="math notranslate nohighlight">\(d&lt;B\)</span>, en el tercer término se usa un peso unitario promedio <span class="math notranslate nohighlight">\(\bar\gamma=\gamma'+(d/B)(\gamma-\gamma')\)</span>. Si <span class="math notranslate nohighlight">\(d\ge B\)</span>, el agua no tiene efecto.</p>
+</section>
+<section id="condiciones-no-drenadas">
+<h3>Condiciones no drenadas<a class="headerlink" href="#condiciones-no-drenadas" title="Link to this heading">#</a></h3>
+<p>En arcillas saturadas cargadas rápidamente, la condición más crítica ocurre inmediatamente después de construir, antes de que se disipen las presiones de poros. Se analiza en esfuerzos totales con <span class="math notranslate nohighlight">\(\phi_u=0\)</span> y la resistencia no drenada <span class="math notranslate nohighlight">\(c_u\)</span>: entonces <span class="math notranslate nohighlight">\(N_q=1\)</span>, <span class="math notranslate nohighlight">\(N_\gamma=0\)</span> y la capacidad última de una zapata corrida es <span class="math notranslate nohighlight">\(q_u=5{,}14\,c_u+q\)</span> (Prandtl).</p>
+</section>
+<section id="excentricidad">
+<h3>Excentricidad<a class="headerlink" href="#excentricidad" title="Link to this heading">#</a></h3>
+<p>Cuando la carga es excéntrica, la presión bajo la cimentación no es uniforme. Meyerhof propuso usar un ancho efectivo <span class="math notranslate nohighlight">\(B'=B-2e\)</span>, de modo que la resultante quede centrada en el área reducida. Las presiones extremas en la base son <span class="math notranslate nohighlight">\(q_{max,min}=(Q/BL)(1\pm6e/B)\)</span>; si <span class="math notranslate nohighlight">\(e&gt;B/6\)</span>, una parte de la base pierde contacto con el suelo.</p>
+</section>
+</section>
+<section id="factor-de-seguridad">
+<h2>Factor de seguridad<a class="headerlink" href="#factor-de-seguridad" title="Link to this heading">#</a></h2>
+<p>La capacidad de carga admisible se obtiene dividiendo la capacidad última por un factor de seguridad, que en cimentaciones superficiales suele estar entre 2,5 y 3:</p>
+<div class="math notranslate nohighlight">
+\[
+q_{adm}=\frac{q_u}{FS}\qquad q_{neta,adm}=\frac{q_u-q}{FS}
+\]</div>
+<p>El factor de seguridad no solo cubre la incertidumbre del modelo de falla, sino sobre todo la de los parámetros del suelo, que depende de la calidad de la exploración y de la variabilidad geológica.</p>
+<div class="note admonition">
+<p class="admonition-title">Ejemplo resuelto: zapata cuadrada (Terzaghi)</p>
+<p>Una zapata cuadrada de 2 m de lado se apoya a 1,5 m de profundidad en un suelo residual con <span class="math notranslate nohighlight">\(c'=10\)</span> kPa, <span class="math notranslate nohighlight">\(\phi'=30°\)</span> y <span class="math notranslate nohighlight">\(\gamma=18\)</span> kN/m³. El nivel freático es profundo. Calcule la capacidad de carga admisible con <span class="math notranslate nohighlight">\(FS=3\)</span> y la carga máxima que puede soportar la zapata.</p>
+<p>Con <span class="math notranslate nohighlight">\(\phi=30°\)</span>: <span class="math notranslate nohighlight">\(N_c=37{,}16\)</span>, <span class="math notranslate nohighlight">\(N_q=22{,}46\)</span> y <span class="math notranslate nohighlight">\(N_\gamma=19{,}13\)</span>. La sobrecarga es <span class="math notranslate nohighlight">\(q=18\times1{,}5=27\)</span> kPa.</p>
+<p><span class="math notranslate nohighlight">\(q_u=1{,}3(10)(37{,}16)+27(22{,}46)+0{,}4(18)(2)(19{,}13)=483+606+275=1365\)</span> kPa.</p>
+<p><span class="math notranslate nohighlight">\(q_{adm}=1365/3=455\)</span> kPa, y la carga admisible es <span class="math notranslate nohighlight">\(Q=455\times2\times2=1820\)</span> kN.</p>
+<p>Si el nivel freático subiera hasta la superficie, <span class="math notranslate nohighlight">\(\gamma'=18-9{,}81\approx8{,}2\)</span> kN/m³ en ambos términos: <span class="math notranslate nohighlight">\(q=12{,}3\)</span> kPa y <span class="math notranslate nohighlight">\(q_u=483+276+125=884\)</span> kPa, una reducción del 35 %.</p>
+</div>
+</section>
+<section id="capacidad-de-carga-de-pilotes">
+<h2>Capacidad de carga de pilotes<a class="headerlink" href="#capacidad-de-carga-de-pilotes" title="Link to this heading">#</a></h2>
+<p>La capacidad última de un pilote es la suma de la resistencia por punta y por fuste:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_u=Q_p+Q_s
+\]</div>
+<p>En <strong>suelos cohesivos</strong> (análisis no drenado) la resistencia por fuste se calcula con el método <span class="math notranslate nohighlight">\(\alpha\)</span>, <span class="math notranslate nohighlight">\(Q_s=\alpha\,c_u\,A_s\)</span>, donde <span class="math notranslate nohighlight">\(\alpha\)</span> es un factor de adhesión entre 0,3 y 1,0 que disminuye con la resistencia de la arcilla, y la resistencia por punta es <span class="math notranslate nohighlight">\(Q_p=9\,c_u\,A_b\)</span>. En <strong>suelos granulares</strong> (análisis drenado), <span class="math notranslate nohighlight">\(Q_s=\sum K_s\,\sigma'_v\tan\delta\,\Delta A_s\)</span>, donde <span class="math notranslate nohighlight">\(K_s\)</span> es el coeficiente de empuje sobre el fuste y <span class="math notranslate nohighlight">\(\delta\)</span> el ángulo de fricción suelo-pilote, y <span class="math notranslate nohighlight">\(Q_p=\sigma'_{v,b}\,N_q\,A_b\)</span>, con un límite práctico al esfuerzo en la punta.</p>
+</section>
+<section id="asentamientos-inmediatos">
+<h2>Asentamientos inmediatos<a class="headerlink" href="#asentamientos-inmediatos" title="Link to this heading">#</a></h2>
+<p>El asentamiento inmediato o elástico de una cimentación flexible sobre un estrato de espesor <span class="math notranslate nohighlight">\(H\)</span> se estima con la teoría de la elasticidad:</p>
+<div class="math notranslate nohighlight">
+\[
+S_e=\frac{q\,B\,(1-\nu^2)}{E_s}\,I_s
+\]</div>
+<p>donde <span class="math notranslate nohighlight">\(E_s\)</span> es el módulo de elasticidad del suelo, <span class="math notranslate nohighlight">\(\nu\)</span> la relación de Poisson e <span class="math notranslate nohighlight">\(I_s\)</span> un factor de influencia que depende de la forma de la cimentación, de su rigidez, de la posición del punto (centro o esquina) y de la relación <span class="math notranslate nohighlight">\(H/B\)</span> (Steinbrenner, 1934). En arenas el asentamiento inmediato suele controlar el diseño, y <span class="math notranslate nohighlight">\(E_s\)</span> se estima a partir de ensayos de campo como el SPT o el CPT.</p>
+</section>
+<section id="lecturas-recomendadas">
+<h2>Lecturas recomendadas<a class="headerlink" href="#lecturas-recomendadas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="bibtex-citation" id="id3">Das [<a class="reference internal" href="referencias.html#id15" title="Braja M. Das. Principios de ingeniería de cimentaciones. International Thomson Editores, México, 4 edition, 1999.">1999</a>]</span>, capítulos 3 a 5.</p></li>
+<li><p><span class="bibtex-citation" id="id4">Das [<a class="reference internal" href="referencias.html#id14" title="Braja M. Das. Fundamentos de ingeniería geotécnica. Thomson Learning, México, 2001.">2001</a>]</span>, capítulo 12.</p></li>
+<li><p>Título H de la NSR-10 <span class="bibtex-citation" id="id5">[<a class="reference internal" href="referencias.html#id33" title="Asociación Colombiana de Ingeniería Sísmica. Reglamento Colombiano de Construcción Sismo Resistente NSR-10, Título H: Estudios geotécnicos. Ministerio de Ambiente, Vivienda y Desarrollo Territorial, Bogotá, 2010.">Asociación Colombiana de Ingeniería Sísmica, 2010</a>]</span>, capítulo H.4.</p></li>
+</ul>
+</section>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Calcule la capacidad admisible de una zapata corrida de 1,2 m de ancho a 1 m de profundidad en una arcilla saturada con <span class="math notranslate nohighlight">\(c_u=40\)</span> kPa y <span class="math notranslate nohighlight">\(\gamma=17\)</span> kN/m³, con <span class="math notranslate nohighlight">\(FS=3\)</span>.</p></li>
+<li><p>Repita el ejemplo de la zapata cuadrada suponiendo falla por cortante local.</p></li>
+<li><p>En un saprolito de granitoide con bloques de roca, ¿qué problemas plantea la estimación de la capacidad portante a partir de ensayos en muestras pequeñas?</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="09_consolidacion.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Consolidación y asentamientos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="11_resistencia_corte.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Resistencia al cortante de los suelos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definicion-y-criterios-de-diseno">Definición y criterios de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tipos-de-cimentaciones">Tipos de cimentaciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacidad-de-carga">Capacidad de carga</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#modos-de-falla">Modos de falla</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#teoria-de-terzaghi">Teoría de Terzaghi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuacion-general">Ecuación general</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#efecto-del-nivel-freatico">Efecto del nivel freático</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condiciones-no-drenadas">Condiciones no drenadas</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excentricidad">Excentricidad</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#factor-de-seguridad">Factor de seguridad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#capacidad-de-carga-de-pilotes">Capacidad de carga de pilotes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asentamientos-inmediatos">Asentamientos inmediatos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Desarrollado por <a href="https://github.com/edieraristizabal">Edier Aristizábal</a>, Facultad de Minas, Universidad Nacional de Colombia.
+<a href="https://edieraristizabal.github.io/Geotecnia/">Página del curso</a> ·
+<a href="https://edieraristizabal.github.io/Geotecnia/html/Geotecnia.html">Diapositivas</a></p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

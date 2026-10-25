@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Resistencia al cortante de los suelos &#8212; Geotecnia para geólogos</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11_resistencia_corte';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <link rel="canonical" href="https://edieraristizabal.github.io/Geotecnia/libro/11_resistencia_corte.html" />
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Resistencia de las rocas y de los macizos rocosos" href="12_resistencia_rocas.html" />
+    <link rel="prev" title="Cimentaciones" href="10_cimentaciones.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Geotecnia para geólogos - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Geotecnia para geólogos - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Geotecnia para geólogos
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte I: Los materiales geológicos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_introduccion.html">Introducción a la geotecnia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_suelos.html">Mecánica de suelos: origen, descripción y clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_rocas.html">Mecánica de rocas: el macizo rocoso y su clasificación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_agua.html">El agua en el suelo y en el macizo rocoso</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte II: Esfuerzos y deformaciones</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="05_esfuerzos.html">Estado de esfuerzos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_esfuerzos_efectivos.html">Esfuerzos efectivos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_distribucion.html">Distribución de esfuerzos verticales</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_compactacion.html">Compactación</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_consolidacion.html">Consolidación y asentamientos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_cimentaciones.html">Cimentaciones</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte III: Resistencia</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Resistencia al cortante de los suelos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_resistencia_rocas.html">Resistencia de las rocas y de los macizos rocosos</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Parte IV: Laderas y estructuras de contención</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="13_movimientos_masa.html">Movimientos en masa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_estabilidad.html">Estabilidad de laderas y taludes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_empujes.html">Empujes de tierras y muros de contención</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Apéndices</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="A_ensayos.html">Apéndice: ensayos geotécnicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="referencias.html">Referencias</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Repositorio de origen"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/edit/main/libro/11_resistencia_corte.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/edieraristizabal/Geotecnia/issues/new?title=Issue%20on%20page%20%2F11_resistencia_corte.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Abrir un problema"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/11_resistencia_corte.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Resistencia al cortante de los suelos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-resistencia-al-corte">La resistencia al corte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-criterio-de-mohr-coulomb">El criterio de Mohr-Coulomb</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mohr-coulomb-en-terminos-de-esfuerzos-principales">Mohr-Coulomb en términos de esfuerzos principales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esfuerzos-totales-y-efectivos">Esfuerzos totales y efectivos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origen-de-la-cohesion-y-de-la-friccion">Origen de la cohesión y de la fricción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dilatancia-y-contractancia">Dilatancia y contractancia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistencia-pico-y-residual">Resistencia pico y residual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-laboratorio">Ensayos de laboratorio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corte-directo">Corte directo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayo-triaxial">Ensayo triaxial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-de-presion-de-poros-de-skempton">Parámetros de presión de poros de Skempton</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compresion-inconfinada">Compresión inconfinada</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-parametros-usar">¿Qué parámetros usar?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="resistencia-al-cortante-de-los-suelos">
+<span id="cap-corte"></span><h1>Resistencia al cortante de los suelos<a class="headerlink" href="#resistencia-al-cortante-de-los-suelos" title="Link to this heading">#</a></h1>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p><strong>Objetivos de aprendizaje</strong></p>
+<ul class="simple">
+<li><p>Enunciar el criterio de falla de Mohr-Coulomb en esfuerzos totales y efectivos.</p></li>
+<li><p>Explicar el origen físico de la cohesión y la fricción, y los fenómenos de dilatancia y contractancia.</p></li>
+<li><p>Diferenciar la resistencia pico, la resistencia en estado crítico y la residual.</p></li>
+<li><p>Interpretar los ensayos de corte directo, triaxial (CD, CU y UU) y de compresión inconfinada.</p></li>
+<li><p>Seleccionar los parámetros de resistencia según las condiciones de drenaje del problema.</p></li>
+</ul>
+</div>
+<section id="la-resistencia-al-corte">
+<h2>La resistencia al corte<a class="headerlink" href="#la-resistencia-al-corte" title="Link to this heading">#</a></h2>
+<p>Los suelos fallan por cizalla. La resistencia al corte movilizada es lo que mantiene estable un talud, lo que soporta una cimentación y lo que limita el empuje sobre un muro. Cuando los esfuerzos cortantes inducidos superan la resistencia disponible a lo largo de una superficie, se produce la ruptura. Esta puede ser <strong>frágil</strong>, por deslizamiento súbito sobre una superficie, con una falla catastrófica, o <strong>dúctil</strong>, por plastificación, con acumulación de grandes deformaciones sin una superficie definida.</p>
+<p>Los criterios de falla pueden expresarse de manera dinámica, en términos de los esfuerzos que la producen, o cinemática, en términos de las deformaciones. En la práctica geotécnica se usan los primeros.</p>
+</section>
+<section id="el-criterio-de-mohr-coulomb">
+<h2>El criterio de Mohr-Coulomb<a class="headerlink" href="#el-criterio-de-mohr-coulomb" title="Link to this heading">#</a></h2>
+<p>Coulomb (1776) postuló que la máxima resistencia al corte en el plano de falla tiene una componente de cohesión y otra de fricción proporcional al esfuerzo normal:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau_f=c+\sigma\tan\phi
+\]</div>
+<p>Mohr (1900) afirmó que un material falla por una combinación crítica de esfuerzo normal y cortante sobre un plano, y no por el valor máximo de uno de ellos. La envolvente de falla es en general curva, pero en el rango de esfuerzos de la mayoría de los problemas se aproxima a la recta de Coulomb. La combinación de ambas ideas es el <strong>criterio de Mohr-Coulomb</strong>.</p>
+<p>La relación de Coulomb es empírica, y solo fue eficaz cuando Terzaghi formuló el principio de esfuerzo efectivo. Como el agua no soporta esfuerzo cortante, la resistencia depende de los esfuerzos que soporta el esqueleto del suelo:</p>
+<div class="math notranslate nohighlight">
+\[
+\tau_f=c'+(\sigma-u)\tan\phi'=c'+\sigma'\tan\phi'
+\]</div>
+<p>Cuanto mayor es el esfuerzo efectivo normal sobre un plano, mayor es su resistencia al corte. Por eso un aumento de la presión de poros, sin ningún cambio en las cargas, puede llevar el suelo a la falla.</p>
+<figure class="align-default" id="fig-mc">
+<a class="reference internal image-reference" href="_images/s15_0039.webp"><img alt="_images/s15_0039.webp" src="_images/s15_0039.webp" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 45 </span><span class="caption-text">Criterio de falla de Mohr-Coulomb. Fuente: Holtz y Kovacs (1981).</span><a class="headerlink" href="#fig-mc" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="mohr-coulomb-en-terminos-de-esfuerzos-principales">
+<h3>Mohr-Coulomb en términos de esfuerzos principales<a class="headerlink" href="#mohr-coulomb-en-terminos-de-esfuerzos-principales" title="Link to this heading">#</a></h3>
+<p>Un elemento no falla mientras su círculo de Mohr esté por debajo de la envolvente; la falla ocurre cuando el círculo la toca. Inicialmente, en un estado isotrópico, el círculo es un punto; al aumentar la carga crece hasta tocar la envolvente. De la geometría del círculo tangente se obtiene:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma'_1=\sigma'_3\tan^2\!\left(45°+\frac{\phi'}{2}\right)+2c'\tan\!\left(45°+\frac{\phi'}{2}\right)
+\]</div>
+<p>y el plano de falla forma un ángulo <span class="math notranslate nohighlight">\(\theta_f=45°+\phi'/2\)</span> con el plano sobre el que actúa el esfuerzo principal mayor.</p>
+</section>
+<section id="esfuerzos-totales-y-efectivos">
+<h3>Esfuerzos totales y efectivos<a class="headerlink" href="#esfuerzos-totales-y-efectivos" title="Link to this heading">#</a></h3>
+<p>Como la presión de poros actúa con igual intensidad en todas las direcciones, el círculo de Mohr en esfuerzos efectivos tiene el mismo diámetro que el de esfuerzos totales y está desplazado una distancia <span class="math notranslate nohighlight">\(u\)</span> hacia la izquierda. Con presiones de poros positivas, el círculo efectivo se acerca a la envolvente. Este es exactamente el mecanismo de los deslizamientos detonados por lluvia: la carga del talud no cambia, pero el círculo efectivo se desplaza hasta tocar la envolvente.</p>
+</section>
+</section>
+<section id="origen-de-la-cohesion-y-de-la-friccion">
+<h2>Origen de la cohesión y de la fricción<a class="headerlink" href="#origen-de-la-cohesion-y-de-la-friccion" title="Link to this heading">#</a></h2>
+<p>La <strong>fricción</strong> proviene de la irregularidad de los contactos entre partículas y del trabazón entre ellas. Depende de la mineralogía (el cuarzo y los feldespatos dan ángulos de 30° a 40°, las arcillas esmectíticas pueden dar menos de 10°), de la forma y la angularidad de los granos, de la gradación y de la compacidad. Se han propuesto relaciones empíricas como <span class="math notranslate nohighlight">\(\tan\phi=\alpha/e\)</span>, con <span class="math notranslate nohighlight">\(\alpha\)</span> entre 0,325 y 0,6, que expresan que el ángulo de fricción aumenta al disminuir la relación de vacíos.</p>
+<p>La <strong>cohesión</strong> es la resistencia que existe aun cuando el esfuerzo normal es nulo. Su origen puede ser la cementación entre partículas (verdadera cohesión, frecuente en suelos residuales con óxidos de hierro y en suelos derivados de cenizas), las fuerzas electroquímicas entre partículas de arcilla, o la succión en suelos no saturados (cohesión aparente). La cohesión aparente desaparece con la saturación, y la cohesión por cementación puede destruirse con el remoldeo o la meteorización progresiva. Por eso, en el análisis de estabilidad a largo plazo, se suele ser conservador con este parámetro.</p>
+</section>
+<section id="dilatancia-y-contractancia">
+<h2>Dilatancia y contractancia<a class="headerlink" href="#dilatancia-y-contractancia" title="Link to this heading">#</a></h2>
+<p>Al ser cortado, un suelo cambia de volumen. Una arena densa o una arcilla fuertemente sobreconsolidada debe <strong>dilatarse</strong> para que las partículas trabadas pasen unas sobre otras: su curva esfuerzo-deformación presenta un pico y luego desciende. Una arena suelta o una arcilla normalmente consolidada se <strong>contrae</strong> al cortarse, y su resistencia aumenta gradualmente sin pico. Ambas tienden, con deformaciones grandes, a un mismo <strong>estado crítico</strong>, en el que el suelo se deforma a volumen y esfuerzo constantes.</p>
+<figure class="align-default" id="fig-dilatancia">
+<a class="reference internal image-reference" href="_images/s12_0037.webp"><img alt="_images/s12_0037.webp" src="_images/s12_0037.webp" style="width: 60%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 46 </span><span class="caption-text">Comportamiento de arenas densas (dilatancia) y sueltas (contractancia) en corte.</span><a class="headerlink" href="#fig-dilatancia" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="resistencia-pico-y-residual">
+<h2>Resistencia pico y residual<a class="headerlink" href="#resistencia-pico-y-residual" title="Link to this heading">#</a></h2>
+<p>En las arcillas sobreconsolidadas y en los suelos con estructura, la resistencia alcanza un pico y luego disminuye con el desplazamiento. Con desplazamientos muy grandes, las partículas laminares de arcilla se orientan paralelas a la superficie de corte y la resistencia cae hasta un valor <strong>residual</strong>, con <span class="math notranslate nohighlight">\(c_r\approx0\)</span> y <span class="math notranslate nohighlight">\(\phi_r\)</span> que puede ser mucho menor que el ángulo pico. La resistencia residual es la que gobierna la reactivación de deslizamientos antiguos, porque su superficie de falla ya ha sufrido grandes desplazamientos. Identificar en campo un deslizamiento antiguo o un plano de falla con estrías es, por lo tanto, un aporte geológico que cambia completamente los parámetros de diseño.</p>
+<figure class="align-default" id="fig-residual">
+<a class="reference internal image-reference" href="_images/s25_0045.webp"><img alt="_images/s25_0045.webp" src="_images/s25_0045.webp" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 47 </span><span class="caption-text">Envolventes de resistencia pico y residual. Fuente: Whitlow (1983).</span><a class="headerlink" href="#fig-residual" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ensayos-de-laboratorio">
+<h2>Ensayos de laboratorio<a class="headerlink" href="#ensayos-de-laboratorio" title="Link to this heading">#</a></h2>
+<p>Los ensayos de resistencia buscan reproducir en una muestra representativa las condiciones de esfuerzo y drenaje del campo. El procedimiento general es tomar una muestra representativa, montarla en el equipo con sus condiciones iniciales y aplicarle los cambios de esfuerzo que experimentará en campo hasta llevarla a la falla.</p>
+<section id="corte-directo">
+<h3>Corte directo<a class="headerlink" href="#corte-directo" title="Link to this heading">#</a></h3>
+<p>La muestra se coloca en una caja partida en dos mitades. Se aplica una carga vertical, se espera la consolidación y luego se desplaza horizontalmente la mitad inferior a velocidad constante, midiendo la fuerza cortante. El ensayo se repite con al menos tres esfuerzos normales, y los pares <span class="math notranslate nohighlight">\((\sigma,\tau_f)\)</span> definen la envolvente. En arcillas el desplazamiento debe ser muy lento para que se disipe la presión de poros. Es un ensayo sencillo, pero impone el plano de falla, no controla el drenaje ni mide la presión de poros, y la distribución de esfuerzos en la muestra no es uniforme. Con inversiones repetidas del desplazamiento, o en el corte anular, permite medir la resistencia residual.</p>
+<figure class="align-default" id="fig-corte-directo">
+<a class="reference internal image-reference" href="_images/s04_0060.webp"><img alt="_images/s04_0060.webp" src="_images/s04_0060.webp" style="width: 65%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 48 </span><span class="caption-text">Esquema del ensayo de corte directo.</span><a class="headerlink" href="#fig-corte-directo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="note admonition">
+<p class="admonition-title">Ejemplo resuelto: corte directo</p>
+<p>Tres ensayos de corte directo drenados sobre un suelo residual arenoso dieron esfuerzos cortantes de falla de 36, 64 y 92 kPa para esfuerzos normales de 50, 100 y 150 kPa. Determine <span class="math notranslate nohighlight">\(c'\)</span> y <span class="math notranslate nohighlight">\(\phi'\)</span>.</p>
+<p>Los puntos están alineados. La pendiente es <span class="math notranslate nohighlight">\((92-36)/(150-50)=0{,}56\)</span>, de modo que <span class="math notranslate nohighlight">\(\phi'=\tan^{-1}0{,}56=29{,}2°\)</span>. La ordenada al origen es <span class="math notranslate nohighlight">\(c'=36-0{,}56\times50=8\)</span> kPa.</p>
+<p>En un suelo residual, este intercepto de cohesión puede deberse a cementación o a succión residual en la muestra. Antes de usarlo en un diseño a largo plazo conviene verificar su origen con ensayos saturados.</p>
+</div>
+</section>
+<section id="ensayo-triaxial">
+<h3>Ensayo triaxial<a class="headerlink" href="#ensayo-triaxial" title="Link to this heading">#</a></h3>
+<p>Una muestra cilíndrica envuelta en una membrana de caucho se coloca en una celda llena de agua, que aplica una presión de confinamiento <span class="math notranslate nohighlight">\(\sigma_3\)</span>. Luego se aplica un esfuerzo axial adicional, el <strong>esfuerzo desviador</strong> <span class="math notranslate nohighlight">\(\Delta\sigma_d=\sigma_1-\sigma_3\)</span>, hasta la falla. El ensayo controla el drenaje y permite medir la presión de poros. Según las condiciones de drenaje en las dos etapas (consolidación y corte) se distinguen tres tipos:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ensayo</p></th>
+<th class="head"><p>Consolidación con <span class="math notranslate nohighlight">\(\sigma_c\)</span></p></th>
+<th class="head"><p>Corte con <span class="math notranslate nohighlight">\(\Delta\sigma_d\)</span></p></th>
+<th class="head"><p>Parámetros</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CD (consolidado drenado)</p></td>
+<td><p>Drenada</p></td>
+<td><p>Drenado, muy lento</p></td>
+<td><p><span class="math notranslate nohighlight">\(c'\)</span>, <span class="math notranslate nohighlight">\(\phi'\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>CU (consolidado no drenado)</p></td>
+<td><p>Drenada</p></td>
+<td><p>No drenado, se mide <span class="math notranslate nohighlight">\(u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(c_{cu}\)</span>, <span class="math notranslate nohighlight">\(\phi_{cu}\)</span> y <span class="math notranslate nohighlight">\(c'\)</span>, <span class="math notranslate nohighlight">\(\phi'\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>UU (no consolidado no drenado)</p></td>
+<td><p>No drenada</p></td>
+<td><p>No drenado</p></td>
+<td><p><span class="math notranslate nohighlight">\(c_u\)</span>, <span class="math notranslate nohighlight">\(\phi_u=0\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<figure class="align-default" id="fig-triaxial">
+<a class="reference internal image-reference" href="_images/s09_0063.webp"><img alt="_images/s09_0063.webp" src="_images/s09_0063.webp" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 49 </span><span class="caption-text">Esquema del equipo triaxial.</span><a class="headerlink" href="#fig-triaxial" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Ensayo CD.</strong> El drenaje se permite durante todo el ensayo, de modo que <span class="math notranslate nohighlight">\(\Delta u=0\)</span> y los esfuerzos totales son iguales a los efectivos. Las arenas densas y las arcillas OC muestran un pico y dilatancia; las arenas sueltas y las arcillas NC, contracción y ausencia de pico. Con varias presiones de confinamiento se obtiene la envolvente <span class="math notranslate nohighlight">\(c'\)</span>, <span class="math notranslate nohighlight">\(\phi'\)</span>; en arcillas NC, <span class="math notranslate nohighlight">\(c'=0\)</span>. Simula las condiciones de <strong>largo plazo</strong>: terraplenes construidos muy lentamente, presas con flujo establecido y excavaciones o laderas naturales en arcillas.</p>
+<div class="note admonition">
+<p class="admonition-title">Ejemplo resuelto: triaxial CD</p>
+<p>Una arcilla normalmente consolidada se ensaya en triaxial CD con <span class="math notranslate nohighlight">\(\sigma_3=100\)</span> kPa y falla con un esfuerzo desviador de 200 kPa. Calcule <span class="math notranslate nohighlight">\(\phi'\)</span> y la orientación del plano de falla.</p>
+<p><span class="math notranslate nohighlight">\(\sigma'_1=100+200=300\)</span> kPa y <span class="math notranslate nohighlight">\(\sigma'_3=100\)</span> kPa. Con <span class="math notranslate nohighlight">\(c'=0\)</span>, <span class="math notranslate nohighlight">\(\sin\phi'=(\sigma'_1-\sigma'_3)/(\sigma'_1+\sigma'_3)=200/400=0{,}5\)</span>, de modo que <span class="math notranslate nohighlight">\(\phi'=30°\)</span>. El plano de falla forma <span class="math notranslate nohighlight">\(45°+30°/2=60°\)</span> con la horizontal.</p>
+</div>
+<p><strong>Ensayo CU.</strong> La muestra se consolida con drenaje y se lleva a la falla sin drenaje, midiendo el exceso de presión de poros. Las arenas sueltas y las arcillas NC generan presiones de poros positivas; las arenas densas y las arcillas OC pueden generarlas negativas por dilatancia. Con un solo tipo de ensayo se obtienen la envolvente total y la efectiva:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma'_{1f}=\sigma_c+\Delta\sigma_f-\Delta u_f\qquad\sigma'_{3f}=\sigma_c-\Delta u_f
+\]</div>
+<p>Se aplica cuando el suelo está consolidado bajo un estado de esfuerzos y luego se cargan esfuerzos adicionales rápidamente: un terraplén construido rápido sobre arcillas ya consolidadas, el desembalse rápido de una presa o un terraplén construido sobre una ladera.</p>
+<p><strong>Ensayo UU.</strong> No se permite el drenaje en ninguna etapa. En un suelo saturado, el aumento de la presión de celda se transmite íntegramente al agua y el esfuerzo efectivo no cambia; por eso todas las muestras fallan con el mismo esfuerzo desviador, los círculos totales tienen el mismo diámetro y la envolvente total es horizontal:</p>
+<div class="math notranslate nohighlight">
+\[
+\phi_u=0\qquad\tau_f=c_u=\frac{\sigma_1-\sigma_3}{2}
+\]</div>
+<p>Simula las condiciones de <strong>corto plazo</strong>: la construcción rápida de un terraplén sobre arcillas saturadas, las excavaciones rápidas y las cimentaciones construidas rápidamente sobre arcillas.</p>
+</section>
+<section id="parametros-de-presion-de-poros-de-skempton">
+<h3>Parámetros de presión de poros de Skempton<a class="headerlink" href="#parametros-de-presion-de-poros-de-skempton" title="Link to this heading">#</a></h3>
+<p>Skempton (1954) expresó el cambio de presión de poros en condiciones no drenadas en función de los cambios de esfuerzos principales:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta u=B\left[\Delta\sigma_3+A\,(\Delta\sigma_1-\Delta\sigma_3)\right]
+\]</div>
+<p>El parámetro <span class="math notranslate nohighlight">\(B\)</span> vale 1 en suelos saturados y disminuye rápidamente con la presencia de aire. El parámetro <span class="math notranslate nohighlight">\(A\)</span> refleja la tendencia del suelo a cambiar de volumen en corte. En arcillas NC de alta sensibilidad <span class="math notranslate nohighlight">\(A_f&gt;1\)</span>; en arcillas NC de baja sensibilidad está entre 0,5 y 1; en arcillas ligeramente OC entre 0 y 0,5; y en arcillas fuertemente OC entre −0,5 y 0.</p>
+</section>
+<section id="compresion-inconfinada">
+<h3>Compresión inconfinada<a class="headerlink" href="#compresion-inconfinada" title="Link to this heading">#</a></h3>
+<p>Es un caso particular del ensayo UU con <span class="math notranslate nohighlight">\(\sigma_3=0\)</span>. La muestra se carga axialmente hasta la falla, y la resistencia a la compresión inconfinada <span class="math notranslate nohighlight">\(q_u\)</span> da la resistencia no drenada <span class="math notranslate nohighlight">\(c_u=q_u/2\)</span>. Es rápido y económico, pero solo es válido en arcillas saturadas sin fisuras.</p>
+</section>
+</section>
+<section id="que-parametros-usar">
+<h2>¿Qué parámetros usar?<a class="headerlink" href="#que-parametros-usar" title="Link to this heading">#</a></h2>
+<p>La elección depende de la velocidad de carga respecto a la velocidad de drenaje del suelo. En <strong>suelos granulares</strong>, la alta permeabilidad disipa rápidamente las sobrepresiones y la resistencia se analiza en esfuerzos efectivos, con <span class="math notranslate nohighlight">\(\tau_f=\sigma'\tan\phi'\)</span>; la cohesión suele ser despreciable. Solo bajo cargas dinámicas, como los sismos, las arenas se comportan sin drenaje y pueden licuarse. En <strong>suelos cohesivos</strong> se distinguen las condiciones a corto plazo, no drenadas, analizadas en esfuerzos totales con <span class="math notranslate nohighlight">\(c_u\)</span>, y las condiciones a largo plazo, drenadas, analizadas en esfuerzos efectivos con <span class="math notranslate nohighlight">\(c'\)</span> y <span class="math notranslate nohighlight">\(\phi'\)</span>. En un terraplén sobre arcilla blanda el caso crítico es el corto plazo, porque la arcilla gana resistencia al consolidarse. En una excavación en arcilla el caso crítico es el largo plazo, porque al descargar se generan presiones de poros negativas que se disipan con el tiempo y la resistencia disminuye.</p>
+<figure class="align-default" id="fig-fs-tiempo">
+<a class="reference internal image-reference" href="_images/s35_0057.webp"><img alt="_images/s35_0057.webp" src="_images/s35_0057.webp" style="width: 70%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 50 </span><span class="caption-text">Variación del factor de seguridad con el tiempo en un talud excavado en arcilla.</span><a class="headerlink" href="#fig-fs-tiempo" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="lecturas-recomendadas">
+<h2>Lecturas recomendadas<a class="headerlink" href="#lecturas-recomendadas" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="bibtex-citation" id="id1">Das [<a class="reference internal" href="referencias.html#id14" title="Braja M. Das. Fundamentos de ingeniería geotécnica. Thomson Learning, México, 2001.">2001</a>]</span>, capítulo 10.</p></li>
+<li><p><span class="bibtex-citation" id="id2">Duncan and Wright [<a class="reference internal" href="referencias.html#id19" title="J. Michael Duncan and Stephen G. Wright. Soil Strength and Slope Stability. John Wiley &amp; Sons, Hoboken, 2005.">2005</a>]</span>, capítulos 3 y 5.</p></li>
+<li><p><span class="bibtex-citation" id="id3">Holtz and Kovacs [<a class="reference internal" href="referencias.html#id28" title="Robert D. Holtz and William D. Kovacs. An Introduction to Geotechnical Engineering. Prentice-Hall, Englewood Cliffs, 1981.">1981</a>]</span>, capítulos 11 y 12.</p></li>
+</ul>
+</section>
+<section id="ejercicios">
+<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Una arena densa ensayada en triaxial CD con <span class="math notranslate nohighlight">\(\sigma_3=150\)</span> kPa falla con <span class="math notranslate nohighlight">\(\Delta\sigma_d=450\)</span> kPa. Calcule <span class="math notranslate nohighlight">\(\phi'\)</span> y el esfuerzo normal y cortante sobre el plano de falla.</p></li>
+<li><p>En un ensayo CU sobre arcilla NC con <span class="math notranslate nohighlight">\(\sigma_c=200\)</span> kPa, la falla se produjo con <span class="math notranslate nohighlight">\(\Delta\sigma_f=150\)</span> kPa y <span class="math notranslate nohighlight">\(\Delta u_f=110\)</span> kPa. Calcule <span class="math notranslate nohighlight">\(\phi_{cu}\)</span>, <span class="math notranslate nohighlight">\(\phi'\)</span> y el parámetro <span class="math notranslate nohighlight">\(A_f\)</span>.</p></li>
+<li><p>Explique por qué en un deslizamiento reactivado se deben usar parámetros residuales, y qué evidencias geológicas permiten reconocer un movimiento antiguo.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="10_cimentaciones.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">Cimentaciones</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="12_resistencia_rocas.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">Resistencia de las rocas y de los macizos rocosos</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#la-resistencia-al-corte">La resistencia al corte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#el-criterio-de-mohr-coulomb">El criterio de Mohr-Coulomb</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mohr-coulomb-en-terminos-de-esfuerzos-principales">Mohr-Coulomb en términos de esfuerzos principales</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esfuerzos-totales-y-efectivos">Esfuerzos totales y efectivos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origen-de-la-cohesion-y-de-la-friccion">Origen de la cohesión y de la fricción</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dilatancia-y-contractancia">Dilatancia y contractancia</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resistencia-pico-y-residual">Resistencia pico y residual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayos-de-laboratorio">Ensayos de laboratorio</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#corte-directo">Corte directo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ensayo-triaxial">Ensayo triaxial</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parametros-de-presion-de-poros-de-skempton">Parámetros de presión de poros de Skempton</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compresion-inconfinada">Compresión inconfinada</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#que-parametros-usar">¿Qué parámetros usar?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecturas-recomendadas">Lecturas recomendadas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ejercicios">Ejercicios</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Edier V. Aristizábal G.
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>Desarrollado por <a href="https://github.com/edieraristizabal">Edier Aristizábal</a>, Facultad de Minas, Universidad Nacional de Colombia.
+<a href="https://edieraristizabal.github.io/Geotecnia/">Página del curso</a> ·
+<a href="https://edieraristizabal.github.io/Geotecnia/html/Geotecnia.html">Diapositivas</a></p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
